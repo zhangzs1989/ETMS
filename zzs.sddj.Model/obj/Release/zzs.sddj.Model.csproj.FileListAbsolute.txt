@@ -1,0 +1,4 @@
+D:\Project\zzs.sddj\zzs.sddj.Model\bin\Release\zzs.sddj.Model.dll
+D:\Project\zzs.sddj\zzs.sddj.Model\bin\Release\zzs.sddj.Model.pdb
+D:\Project\zzs.sddj\zzs.sddj.Model\obj\Release\zzs.sddj.Model.dll
+D:\Project\zzs.sddj\zzs.sddj.Model\obj\Release\zzs.sddj.Model.pdb

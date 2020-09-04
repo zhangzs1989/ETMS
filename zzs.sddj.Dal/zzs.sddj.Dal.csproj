@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44F2E09C-6BA7-4BB5-908C-D6DD1200DFF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zzs.sddj.Dal</RootNamespace>
+    <AssemblyName>zzs.sddj.Dal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLoginInfoDal.cs" />
+    <Compile Include="DanweiInfoDal.cs" />
+    <Compile Include="DepartmentIdIndexDal.cs" />
+    <Compile Include="DepartmentLoginInfoDal.cs" />
+    <Compile Include="EtmsplasDal.cs" />
+    <Compile Include="JibieDal.cs" />
+    <Compile Include="JuneiTrainDal.cs" />
+    <Compile Include="JuneiTrainInfoDal.cs" />
+    <Compile Include="NoticeDal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="TrainInfoDal.cs" />
+    <Compile Include="TrainzhibiaoDal.cs" />
+    <Compile Include="UserInfoDal.cs" />
+    <Compile Include="UserInfo_allDal.cs" />
+    <Compile Include="wlxsdal.cs" />
+    <Compile Include="XuelixueweiDal.cs" />
+    <Compile Include="ZhiduDal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zzs.sddj.Model\zzs.sddj.Model.csproj">
+      <Project>{7B3680DA-8F5C-4DC6-BB0B-CA7D63F19611}</Project>
+      <Name>zzs.sddj.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

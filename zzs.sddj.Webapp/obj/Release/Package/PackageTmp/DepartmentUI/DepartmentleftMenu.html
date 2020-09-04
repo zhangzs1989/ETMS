@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        //导航切换
+        $(".menuson li").click(function () {
+            $(".menuson li.active").removeClass("active")
+            $(this).addClass("active");
+        });
+
+        $('.title').click(function () {
+            var $ul = $(this).next('ul');
+            $('dd').find('ul').slideUp();
+            if ($ul.is(':visible')) {
+                $(this).next('ul').slideUp();
+            } else {
+                $(this).next('ul').slideDown();
+            }
+        });
+    })	
+</script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+	<div class="lefttop"><span></span>功能导航</div>
+    
+    <dl class="leftmenu">
+        
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" alt="图片下载失败" /></span>查看通知公告
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="DepartmentIndex.ashx" target="rightFrame">首页</a><i></i></li>
+        <li><cite></cite><a href="DepartmentNewnotice.aspx" target="rightFrame">新的通知</a><i></i></li>
+        <li><cite></cite><a href="Departmentzhidulist.aspx" target="rightFrame">制度规定</a><i></i></li>
+        </ul>    
+    </dd>
+        
+    
+    <!--<dd>
+    <div class="title">
+    <span><img src="images/leftico02.png"  alt="图片下载失败"/></span>局外脱产培训查询
+    </div>
+    <ul class="menuson">
+        <li><cite></cite><a href="JuwaitrainInquiry.aspx" target="rightFrame">局外脱产培训查询与管理</a><i></i></li>
+        </ul>     
+    </dd>--> 
+    
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico02.png"  alt="图片下载失败"/></span>本部门组织脱产培训
+    </div>
+    <ul class="menuson">
+        <li><cite></cite><a href="JuneitrainInquiry.aspx" target="rightFrame">局内培训提交</a><i></i></li>
+        
+        </ul>     
+    </dd> 
+    
+    <dd><div class="title"><span><img src="images/leftico03.png" alt="图片下载失败" /></span>学历学位升级教育</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="XuelixueweiSp.aspx" target="rightFrame">学历学位审批</a><i></i></li>
+        
+    </ul>    
+    </dd>  
+    
+    
+    <dd><div class="title"><span><img src="images/leftico04.png" alt="图片下载失败" /></span>培训情况综合管理</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="Juneitrainchaxun.aspx" target="rightFrame">局内培训查询</a><i></i></li>
+        <li><cite></cite><a href="JuwaitrainInquiry.aspx" target="rightFrame">局外脱产培训查询</a><i></i></li>
+        <li><cite></cite><a href="XuelixueweiInquiry.aspx" target="rightFrame">学历学位查询</a><i></i></li>
+        <!--<li><cite></cite><a href="#">培训情况数据导出</a><i></i></li>-->
+    </ul>
+    
+    </dd>   
+    
+    <dd><div class="title"><span><img src="images/leftico04.png" alt="图片下载失败" /></span>设置</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="departmentXiuGaiMiMa.aspx" target="rightFrame">密码修改</a><i></i></li>
+    </ul>
+    
+    </dd>   
+    
+    
+
+    </dl>
+
+
+</body>
+</html>

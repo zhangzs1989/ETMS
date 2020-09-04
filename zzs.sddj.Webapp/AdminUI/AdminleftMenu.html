@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){	
+	//导航切换
+	$(".menuson li").click(function(){
+		$(".menuson li.active").removeClass("active")
+		$(this).addClass("active");
+	});
+	
+	$('.title').click(function(){
+		var $ul = $(this).next('ul');
+		$('dd').find('ul').slideUp();
+		if($ul.is(':visible')){
+			$(this).next('ul').slideUp();
+		}else{
+			$(this).next('ul').slideDown();
+		}
+	});
+})	
+</script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+	<div class="lefttop"><span></span>功能导航</div>
+    
+    <dl class="leftmenu">
+        
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" alt="图片下载失败" /></span>发布通知公告
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="AdminIndex.ashx" target="rightFrame">首页</a><i></i></li>
+        <li><cite></cite><a href="NewnoticeAdd.aspx" target="rightFrame">发布新的通知</a><i></i></li>
+        <li><cite></cite><a href="Upzhidu.aspx" target="rightFrame">上传制度文件</a><i></i></li>
+        </ul>    
+    </dd>
+
+        <dd>
+            <div class="title">
+                <span><img src="images/leftico02.png" alt="图片下载失败" /></span>通知公告管理
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="NewnoticeManager.aspx" target="rightFrame">通知管理</a><i></i></li>
+                <li><cite></cite><a href="AdminzhiduManager.aspx" target="rightFrame">制度规定管理</a><i></i></li>
+            </ul>
+        </dd>
+
+        <dd>
+            <div class="title">
+                <span><img src="images/leftico01.png" alt="图片下载失败" /></span>年度教育培训计划
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="EtmsplanManager.aspx" target="rightFrame">下载年度教育培训计划</a><i></i></li>
+            </ul>
+        </dd>
+
+
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico03.png"  alt="图片下载失败"/></span>局外脱产培训管理
+    </div>
+    <ul class="menuson">
+        <!--<li><cite></cite><a href="JuwaitrainManager.aspx" target="rightFrame">局外脱产培训查询与管理</a><i></i></li>-->
+        <li><cite></cite><a href="JwManager.aspx" target="rightFrame">脱产培训管理</a><i></i></li>
+        <!--<li><cite></cite><a href="Juwaitraincount.aspx" target="rightFrame">局外脱产培训信息统计</a><i></i></li>-->
+        <li><cite></cite><a href="Downloadjwtrain.aspx" target="rightFrame">下载局外培训信息</a><i></i></li>
+        </ul>     
+    </dd> 
+
+        <dd>
+            <div class="title"><span><img src="images/leftico01.png" alt="图片下载失败" /></span>局内培训管理</div>
+            <ul class="menuson">
+                
+                <li><cite></cite><a href="JnManager.aspx" target="rightFrame">局内组织培训情况</a><i></i></li>
+                <li><cite></cite><a href="Juneitrainperson.aspx" target="rightFrame">局内个人参训管理</a><i></i></li>
+                <li><cite></cite><a href="DownloadJuneitrain.aspx" target="rightFrame">下载局内培训信息</a><i></i></li>
+
+            </ul>
+        </dd>
+        <!--<dd>
+            <div class="title"><span><img src="images/leftico03.png" alt="图片下载失败" /></span>学历学位</div>
+            <ul class="menuson">
+
+                <li><cite></cite><a href="Xlxwdengji.aspx"  rightFrame">学历学位管理</a><i></i></li>
+                <li><cite></cite><a href="XlxwManager.aspx"  rightFrame">学历学位登记</a><i></i></li>
+            </ul>
+        </dd>-->
+
+    <dd><div class="title"><span><img src="images/leftico03.png" alt="图片下载失败" /></span>学历学位升级教育</div>
+    <ul class="menuson">
+        <!--<li><cite></cite><a href="Xlxwdengji.aspx" target="rightFrame">学历学位升级登记</a><i></i></li>
+        <li><cite></cite><a href="AdminxlxwSP.aspx" target="rightFrame">学历学位升级审批</a><i></i></li>
+        <li><cite></cite><a href="Xuelixuewei.aspx" target="rightFrame">学历学位查询与管理</a><i></i></li>-->
+        <li><cite></cite><a href="XlxwManager.aspx" target="rightFrame">学历学位升级情况</a><i></i></li>
+        <li><cite></cite><a href="Xlxwdengji.aspx" target="rightFrame">学历学位升级登记</a><i></i></li>
+    </ul>    
+    </dd> 
+       
+        <dd>
+            <div class="title"><span><img src="images/leftico04.png" alt="图片下载失败" /></span>网络学习管理</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="Wlxxup.aspx" target="rightFrame">上传网络学时</a><i></i></li>
+                <li><cite></cite><a href="WlxsManager.aspx" target="rightFrame">查询网络学习学分</a><i></i></li>
+            </ul>
+        </dd>  
+        <dd>
+            <div class="title"><span><img src="images/leftico02.png" alt="图片下载失败" /></span>年度教育培训档案表管理</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="DownloadAllcanxun.aspx" target="rightFrame">一键导出</a><i></i></li>
+                <!--<li><cite></cite><a href="DownloadUsercanxun.aspx" target="rightFrame">个人导出</a><i></i></li>-->
+            </ul>
+
+        </dd>
+        
+        <!--<dd>
+            <div class="title"><span><img src="images/leftico01.png" alt="图片下载失败" /></span>数据库备份还原</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="restoresql.aspx" target="rightFrame">备份数据库</a><i></i></li>
+                <li><cite></cite><a href="recoverysql.aspx" target="rightFrame">还原数据库</a><i></i></li>
+                
+            </ul>
+
+        </dd>-->  
+          
+
+    <dd><div class="title"><span><img src="images/leftico04.png" alt="图片下载失败" /></span>信息维护</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="UserInfoManager.aspx" target="rightFrame">职工信息管理</a><i></i></li>
+        <li><cite></cite><a href="UserLoginInfo.aspx" target="rightFrame">用户账号管理</a><i></i></li>
+        <li><cite></cite><a href="DepartLoginInfo.aspx" target="rightFrame">部门账号管理</a><i></i></li>
+        <li><cite></cite><a href="AdminLoginInfo.aspx" target="rightFrame">管理员账号管理</a><i></i></li>
+    </ul>
+    
+    </dd>   
+    
+        <dd>
+            <div class="title"><span><img src="images/leftico03.png" alt="图片下载失败" /></span>设置</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="AdminXiuGaiMiMa.aspx" target="rightFrame">密码修改</a><i></i></li>
+            </ul>
+        </dd>  
+
+    </dl>
+
+
+</body>
+</html>

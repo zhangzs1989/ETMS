@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){	
+	//导航切换
+	$(".menuson li").click(function(){
+		$(".menuson li.active").removeClass("active")
+		$(this).addClass("active");
+	});
+	
+	$('.title').click(function(){
+		var $ul = $(this).next('ul');
+		$('dd').find('ul').slideUp();
+		if($ul.is(':visible')){
+			$(this).next('ul').slideUp();
+		}else{
+			$(this).next('ul').slideDown();
+		}
+	});
+})	
+</script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+	<div class="lefttop"><span></span>功能导航</div>
+    
+    <dl class="leftmenu">
+        
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico01.png" alt="图片下载失败" /></span>通知公告
+    </div>
+    	<ul class="menuson">
+        <li class="active"><cite></cite><a href="Userindex.ashx" target="rightFrame">首页</a><i></i></li>
+        <li><cite></cite><a href="UserNewnotice.aspx" target="rightFrame">最新通知</a><i></i></li>
+        <li><cite></cite><a href="Userzhidulist.aspx" target="rightFrame">制度规定</a><i></i></li>
+        <!--<li><cite></cite><a href="User_download_file.html" target="rightFrame">文档材料下载</a><i></i></li>-->
+        <!--<li><cite></cite><a href="imglist.html" target="rightFrame">图片列表</a><i></i></li>
+        <li><cite></cite><a href="imglist1.html" target="rightFrame">自定义</a><i></i></li>
+        <li><cite></cite><a href="tools.html" target="rightFrame">常用工具</a><i></i></li>
+        <li><cite></cite><a href="filelist.html" target="rightFrame">信息管理</a><i></i></li>
+        <li><cite></cite><a href="tab.html" target="rightFrame">Tab页</a><i></i></li>
+        <li><cite></cite><a href="error.html" target="rightFrame">404页面</a><i></i></li>-->
+        </ul>    
+    </dd>
+        
+    
+    <dd>
+    <div class="title">
+    <span><img src="images/leftico02.png"  alt="图片下载失败"/></span>局外脱产培训
+    </div>
+    <ul class="menuson">
+        <li><cite></cite><a href="Juwaitrain.aspx" target="rightFrame">提交参训情况</a><i></i></li>
+        <!--<li><cite></cite><a href="Juwaitrainsp.aspx" target="rightFrame">审批查询</a><i></i></li>-->
+        <!--<li><cite></cite><a href="tab.html" target="rightFrame">发布信息</a><i></i></li>
+        <li><cite></cite><a href="#">档案列表显示</a><i></i></li>-->
+        </ul>     
+    </dd> 
+    
+    
+    <dd><div class="title"><span><img src="images/leftico03.png" alt="图片下载失败" /></span>学历学位升级教育</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="Xuelixuewei.aspx" target="rightFrame">提交申请</a><i></i></li>
+        <li><cite></cite><a href="XuelixueweiSP.aspx" target="rightFrame">审批进度</a><i></i></li>
+        <li><cite></cite><a href="XuelixueweiTj.aspx" target="rightFrame">提交升级教育情况</a><i></i></li>
+        <!--<li><cite></cite><a href="#">其他</a><i></i></li>-->
+    </ul>    
+    </dd>  
+    
+    
+    <dd><div class="title"><span><img src="images/leftico04.png" alt="图片下载失败" /></span>培训情况查询</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="Usercanxunjw.aspx" target="rightFrame">局外个人参训统计</a><i></i></li>
+        <li><cite></cite><a href="Usercanxunjn.aspx" target="rightFrame">局内个人参训统计</a><i></i></li>
+        <li><cite></cite><a href="Usercanxunxlxw.aspx" target="rightFrame">学历学位升级</a><i></i></li>
+        <li><cite></cite><a href="UserAllTrainToExcel.aspx" target="rightFrame">导出所有参训信息</a><i></i></li>
+        
+        <!--<li><cite></cite><a href="#">导出参训情况</a><i></i></li>-->
+        <!--<li><cite></cite><a href="#">信息列表</a><i></i></li>
+        <li><cite></cite><a href="#">其他</a><i></i></li>-->
+    </ul>
+    
+    </dd>   
+    
+    <dd><div class="title"><span><img src="images/leftico04.png" alt="图片下载失败" /></span>个人设置</div>
+    <ul class="menuson">
+        <li><cite></cite><a href="XiuGaiMiMa.aspx" target="rightFrame">密码修改</a><i></i></li>
+    </ul>
+    
+    </dd>   
+    
+    
+
+    </dl>
+
+
+</body>
+</html>

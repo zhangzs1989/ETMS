@@ -1,0 +1,27 @@
+clear all;
+%定义输入向量和目标向量
+time=0.01:0.01:10;             %时间变量
+noise=(rand(1,1000)-0.5)*4;    %随机噪声
+input=sin(time);               %输入信号
+p=noise;                       %将噪声作为ADALINE的输入向量
+t=input+noise;                 %将噪声+信号作为目标向量
+                               %创建线性神经网络
+net=newlin([-1 1],1,0,0.0005);
+%线性神经网络的训练
+net.adaptParam.passes=70;
+[net,y,output]=adapt(net,p,t);    %output为网络调整过程的误差
+%绘制信号
+hold on;
+subplot(3,1,1);
+plot(time,input,'r');
+title('信号波形sin(t)');
+
+subplot(3,1,2);
+plot(time,t,'m');                  %绘制叠加信号
+xlabel('t');
+title('随机噪声波形sin(t)+noise(t)');
+%绘制输出信号的波形
+subplot(3,1,3);
+plot(time,output,'b');
+xlabel('t');
+title('输出信号波形y(t)');

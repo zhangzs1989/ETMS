@@ -1,0 +1,7 @@
+D:\Project\zzs.sddj\zzs.sddj.Dal\bin\Release\zzs.sddj.Dal.dll
+D:\Project\zzs.sddj\zzs.sddj.Dal\bin\Release\zzs.sddj.Dal.pdb
+D:\Project\zzs.sddj\zzs.sddj.Dal\bin\Release\zzs.sddj.Model.dll
+D:\Project\zzs.sddj\zzs.sddj.Dal\bin\Release\zzs.sddj.Model.pdb
+D:\Project\zzs.sddj\zzs.sddj.Dal\obj\Release\zzs.sddj.Dal.csprojResolveAssemblyReference.cache
+D:\Project\zzs.sddj\zzs.sddj.Dal\obj\Release\zzs.sddj.Dal.dll
+D:\Project\zzs.sddj\zzs.sddj.Dal\obj\Release\zzs.sddj.Dal.pdb

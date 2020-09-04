@@ -1,0 +1,2460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3524D0E2-6645-4DAA-8460-686DA12DB5E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zzs.sddj.Webapp</RootNamespace>
+    <AssemblyName>zzs.sddj.Webapp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>AdminUI\dotnettextbox\com\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="FreeTextBox, Version=1.6.3.26073, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\FreeTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>UserUI\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Vbe.Interop, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>AdminUI\dotnettextbox\com\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AdminUI\utf8-net\net\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>UserUI\bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>UserUI\bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>UserUI\bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>UserUI\bin\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>AdminUI\dotnettextbox\com\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminUI\AddAdminLoginInfo.aspx" />
+    <Content Include="AdminUI\AddDepartLoginInfo.aspx" />
+    <Content Include="AdminUI\AddJwTrain.aspx" />
+    <Content Include="AdminUI\AdduserInfo.aspx" />
+    <Content Include="AdminUI\AdduserLoginInfo.aspx" />
+    <Content Include="AdminUI\AdminLoginInfo.aspx" />
+    <Content Include="AdminUI\Adminshowxlxwdetail.aspx" />
+    <Content Include="AdminUI\AdminUserInfoManager.aspx" />
+    <Content Include="AdminUI\AdminXiuGaiMiMa.asmx" />
+    <Content Include="AdminUI\AdminXiuGaiMiMa.aspx" />
+    <Content Include="AdminUI\AdminxlxwSP.aspx" />
+    <Content Include="AdminUI\AdminzhiduAdd.aspx" />
+    <Content Include="AdminUI\AdminzhiduManager.aspx" />
+    <Content Include="AdminUI\css2\style.css" />
+    <Content Include="AdminUI\css\CSS.css" />
+    <Content Include="AdminUI\css\demo.css" />
+    <Content Include="AdminUI\css\select.css" />
+    <Content Include="AdminUI\css\style.css" />
+    <Content Include="AdminUI\deleteadminjn.aspx" />
+    <Content Include="AdminUI\DeleteAdminLogininfo.aspx" />
+    <Content Include="AdminUI\DeleteDepartLogininfo.aspx" />
+    <Content Include="AdminUI\DeleteEtmsplan.aspx" />
+    <Content Include="AdminUI\Deletejnpersontrain.aspx" />
+    <Content Include="AdminUI\Deletejntrain.aspx" />
+    <Content Include="AdminUI\Deletejwtrain.aspx" />
+    <Content Include="AdminUI\DeleteNotice.aspx" />
+    <Content Include="AdminUI\DeleteUserInfo.aspx" />
+    <Content Include="AdminUI\DeleteUserLogininfo.aspx" />
+    <Content Include="AdminUI\Deletewlxs.aspx" />
+    <Content Include="AdminUI\Deletexlxw.aspx" />
+    <Content Include="AdminUI\deletezhidu.aspx" />
+    <Content Include="AdminUI\DepartLoginInfo.aspx" />
+    <Content Include="AdminUI\DownloadAllcanxun.aspx" />
+    <Content Include="AdminUI\DownloadEtmsplan.aspx" />
+    <Content Include="AdminUI\DownloadJuneitrain.aspx" />
+    <Content Include="AdminUI\downloadjwcailiao.aspx" />
+    <Content Include="AdminUI\Downloadjwtrain.aspx" />
+    <Content Include="AdminUI\DownloadUsercanxun.aspx" />
+    <Content Include="AdminUI\Downloadwlxs.aspx" />
+    <Content Include="AdminUI\downloadzhidu.aspx" />
+    <Content Include="AdminUI\Editadminjn.aspx" />
+    <Content Include="AdminUI\EditAdminLogininfo.aspx" />
+    <Content Include="AdminUI\EditDepartLogininfo.aspx" />
+    <Content Include="AdminUI\Editjntrain.aspx" />
+    <Content Include="AdminUI\EditJwtrain.aspx" />
+    <Content Include="AdminUI\EditjwtrainDetail.aspx" />
+    <Content Include="AdminUI\EditUserInfo.aspx" />
+    <Content Include="AdminUI\EditUserLogininfo.aspx" />
+    <Content Include="AdminUI\EditxlxwDetail.aspx" />
+    <Content Include="AdminUI\EditXlxwInfo.aspx" />
+    <Content Include="AdminUI\EtmsplanManager.aspx" />
+    <Content Include="AdminUI\images\001.jpg" />
+    <Content Include="AdminUI\images\404.png" />
+    <Content Include="AdminUI\images\add.png" />
+    <Content Include="AdminUI\images\btnbg.png" />
+    <Content Include="AdminUI\images\btnbg1.png" />
+    <Content Include="AdminUI\images\btnbg2.png" />
+    <Content Include="AdminUI\images\buttonbg.png" />
+    <Content Include="AdminUI\images\c01.png" />
+    <Content Include="AdminUI\images\c02.png" />
+    <Content Include="AdminUI\images\c03.png" />
+    <Content Include="AdminUI\images\cbg.png" />
+    <Content Include="AdminUI\images\clist.png" />
+    <Content Include="AdminUI\images\close.png" />
+    <Content Include="AdminUI\images\close1.png" />
+    <Content Include="AdminUI\images\cloud.png" />
+    <Content Include="AdminUI\images\d01.png" />
+    <Content Include="AdminUI\images\d02.png" />
+    <Content Include="AdminUI\images\d03.png" />
+    <Content Include="AdminUI\images\d04.png" />
+    <Content Include="AdminUI\images\d05.png" />
+    <Content Include="AdminUI\images\d06.png" />
+    <Content Include="AdminUI\images\d07.png" />
+    <Content Include="AdminUI\images\diskbg.png" />
+    <Content Include="AdminUI\images\dp.png" />
+    <Content Include="AdminUI\images\f01.png" />
+    <Content Include="AdminUI\images\f02.png" />
+    <Content Include="AdminUI\images\f03.png" />
+    <Content Include="AdminUI\images\f04.png" />
+    <Content Include="AdminUI\images\f05.png" />
+    <Content Include="AdminUI\images\f06.png" />
+    <Content Include="AdminUI\images\help.png" />
+    <Content Include="AdminUI\images\i01.png" />
+    <Content Include="AdminUI\images\i02.png" />
+    <Content Include="AdminUI\images\i03.png" />
+    <Content Include="AdminUI\images\i04.png" />
+    <Content Include="AdminUI\images\i05.png" />
+    <Content Include="AdminUI\images\i06.png" />
+    <Content Include="AdminUI\images\i07.png" />
+    <Content Include="AdminUI\images\i08.png" />
+    <Content Include="AdminUI\images\i09.png" />
+    <Content Include="AdminUI\images\iadd.png" />
+    <Content Include="AdminUI\images\ibtnbg.png" />
+    <Content Include="AdminUI\images\ico01.png" />
+    <Content Include="AdminUI\images\ico02.png" />
+    <Content Include="AdminUI\images\ico03.png" />
+    <Content Include="AdminUI\images\ico04.png" />
+    <Content Include="AdminUI\images\ico05.png" />
+    <Content Include="AdminUI\images\ico06.png" />
+    <Content Include="AdminUI\images\icon01.png" />
+    <Content Include="AdminUI\images\icon02.png" />
+    <Content Include="AdminUI\images\icon03.png" />
+    <Content Include="AdminUI\images\icon04.png" />
+    <Content Include="AdminUI\images\icon05.png" />
+    <Content Include="AdminUI\images\icon06.png" />
+    <Content Include="AdminUI\images\img01.png" />
+    <Content Include="AdminUI\images\img02.png" />
+    <Content Include="AdminUI\images\img03.png" />
+    <Content Include="AdminUI\images\img04.png" />
+    <Content Include="AdminUI\images\img05.png" />
+    <Content Include="AdminUI\images\img06.png" />
+    <Content Include="AdminUI\images\img07.png" />
+    <Content Include="AdminUI\images\img08.png" />
+    <Content Include="AdminUI\images\img09.png" />
+    <Content Include="AdminUI\images\img10.png" />
+    <Content Include="AdminUI\images\img11.png" />
+    <Content Include="AdminUI\images\img12.png" />
+    <Content Include="AdminUI\images\img13.png" />
+    <Content Include="AdminUI\images\img14.png" />
+    <Content Include="AdminUI\images\img15.png" />
+    <Content Include="AdminUI\images\inputbg.gif" />
+    <Content Include="AdminUI\images\itabbg.png" />
+    <Content Include="AdminUI\images\itabbg1.png" />
+    <Content Include="AdminUI\images\leftico.png" />
+    <Content Include="AdminUI\images\leftico01.png" />
+    <Content Include="AdminUI\images\leftico02.png" />
+    <Content Include="AdminUI\images\leftico03.png" />
+    <Content Include="AdminUI\images\leftico04.png" />
+    <Content Include="AdminUI\images\leftline.gif" />
+    <Content Include="AdminUI\images\leftmenubg.gif" />
+    <Content Include="AdminUI\images\lefttop.gif" />
+    <Content Include="AdminUI\images\libg.png" />
+    <Content Include="AdminUI\images\light.png" />
+    <Content Include="AdminUI\images\line.gif" />
+    <Content Include="AdminUI\images\line1.png" />
+    <Content Include="AdminUI\images\list.gif" />
+    <Content Include="AdminUI\images\list1.gif" />
+    <Content Include="AdminUI\images\list2.png" />
+    <Content Include="AdminUI\images\loginbg1.png" />
+    <Content Include="AdminUI\images\loginbg2.png" />
+    <Content Include="AdminUI\images\loginbg3.png" />
+    <Content Include="AdminUI\images\logininfo.png" />
+    <Content Include="AdminUI\images\loginlogo.png" />
+    <Content Include="AdminUI\images\loginpassword.png" />
+    <Content Include="AdminUI\images\loginsj.png" />
+    <Content Include="AdminUI\images\loginuser.png" />
+    <Content Include="AdminUI\images\logo.png" />
+    <Content Include="AdminUI\images\msg.png" />
+    <Content Include="AdminUI\images\navbg.png" />
+    <Content Include="AdminUI\images\next.gif" />
+    <Content Include="AdminUI\images\pre.gif" />
+    <Content Include="AdminUI\images\px.gif" />
+    <Content Include="AdminUI\images\righttop.gif" />
+    <Content Include="AdminUI\images\rlist.gif" />
+    <Content Include="AdminUI\images\search.png" />
+    <Content Include="AdminUI\images\sj.png" />
+    <Content Include="AdminUI\images\sun.png" />
+    <Content Include="AdminUI\images\t01.png" />
+    <Content Include="AdminUI\images\t02.png" />
+    <Content Include="AdminUI\images\t03.png" />
+    <Content Include="AdminUI\images\t04.png" />
+    <Content Include="AdminUI\images\t05.png" />
+    <Content Include="AdminUI\images\tbg.png" />
+    <Content Include="AdminUI\images\tcbg.gif" />
+    <Content Include="AdminUI\images\th.gif" />
+    <Content Include="AdminUI\images\ticon.png" />
+    <Content Include="AdminUI\images\time.png" />
+    <Content Include="AdminUI\images\toolbg.gif" />
+    <Content Include="AdminUI\images\topbg.gif" />
+    <Content Include="AdminUI\images\topleft.jpg" />
+    <Content Include="AdminUI\images\topright.jpg" />
+    <Content Include="AdminUI\images\ub1.png" />
+    <Content Include="AdminUI\images\uew_icon.png" />
+    <Content Include="AdminUI\images\uew_icon_hover.png" />
+    <Content Include="AdminUI\images\ulist.png" />
+    <Content Include="AdminUI\images\user.png" />
+    <Content Include="AdminUI\images\userbg.png" />
+    <Content Include="AdminUI\JnManager.aspx" />
+    <Content Include="AdminUI\js\cloud.js" />
+    <Content Include="AdminUI\js\format+zh_CN,default,corechart.I.js" />
+    <Content Include="AdminUI\js\jquery.ba-resize.min.js" />
+    <Content Include="AdminUI\js\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="AdminUI\js\jquery.idTabs.min.js" />
+    <Content Include="AdminUI\js\jquery.js" />
+    <Content Include="AdminUI\js\jsapi.js" />
+    <Content Include="AdminUI\js\PIE.htc" />
+    <Content Include="AdminUI\js\select-ui.min.js" />
+    <Content Include="AdminUI\Juneitraincount.aspx" />
+    <Content Include="AdminUI\JuneitrainManager.aspx" />
+    <Content Include="AdminUI\Juneitrainperson.aspx" />
+    <Content Include="AdminUI\Juwaitraincount.aspx" />
+    <Content Include="AdminUI\JuwaitrainManager.aspx" />
+    <Content Include="AdminUI\JwManager.aspx" />
+    <Content Include="AdminUI\NewnoticeAdd.aspx" />
+    <Content Include="AdminUI\NewnoticeManager.aspx" />
+    <Content Include="AdminUI\restoresql.aspx" />
+    <Content Include="AdminUI\Showadminjndetail.aspx" />
+    <Content Include="AdminUI\Showjndetail.aspx" />
+    <Content Include="AdminUI\ShowjnpersontrainDetail.aspx" />
+    <Content Include="AdminUI\ShowjwtrainDetail.aspx" />
+    <Content Include="AdminUI\ShowNoticeDetail.aspx" />
+    <Content Include="AdminUI\ShowUserInfodetail.aspx" />
+    <Content Include="AdminUI\showwlxs.aspx" />
+    <Content Include="AdminUI\ShowXlxwInfodetail.aspx" />
+    <Content Include="AdminUI\src\jquery.gvChart-1.0.1.js" />
+    <Content Include="AdminUI\Admintop.html" />
+    <Content Include="AdminUI\AdminIndex.html" />
+    <Content Include="AdminUI\AdminleftMenu.html" />
+    <Content Include="AdminUI\AdminMain.html" />
+    <Content Include="AdminUI\test.aspx" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="AdminUI\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="AdminUI\ueditor\dialogs\formula\formula.css" />
+    <Content Include="AdminUI\ueditor\dialogs\formula\formula.html" />
+    <Content Include="AdminUI\ueditor\dialogs\formula\formula.js" />
+    <Content Include="AdminUI\ueditor\dialogs\formula\images\formula.png" />
+    <Content Include="AdminUI\ueditor\dialogs\image\image.css" />
+    <Content Include="AdminUI\ueditor\dialogs\image\image.js" />
+    <Content Include="AdminUI\ueditor\dialogs\image\images\close.png" />
+    <Content Include="AdminUI\ueditor\dialogs\image\images\upload1.png" />
+    <Content Include="AdminUI\ueditor\dialogs\image\images\upload2.png" />
+    <Content Include="AdminUI\ueditor\dialogs\link\link.js" />
+    <Content Include="AdminUI\ueditor\dialogs\map\map.html" />
+    <Content Include="AdminUI\ueditor\dialogs\map\map.js" />
+    <Content Include="AdminUI\ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="AdminUI\ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="AdminUI\ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="AdminUI\ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="AdminUI\ueditor\dialogs\video\video.css" />
+    <Content Include="AdminUI\ueditor\dialogs\video\video.js" />
+    <Content Include="AdminUI\ueditor\index.html" />
+    <Content Include="AdminUI\ueditor\lang\en\en.js" />
+    <Content Include="AdminUI\ueditor\lang\en\images\addimage.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\background.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\button.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\copy.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\imglabel.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\listbackground.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\localimage.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\music.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="AdminUI\ueditor\lang\en\images\upload.png" />
+    <Content Include="AdminUI\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="AdminUI\ueditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="AdminUI\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="AdminUI\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="AdminUI\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="AdminUI\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="AdminUI\ueditor\themes\default\css\umeditor.css" />
+    <Content Include="AdminUI\ueditor\themes\default\css\umeditor.min.css" />
+    <Content Include="AdminUI\ueditor\themes\default\images\caret.png" />
+    <Content Include="AdminUI\ueditor\themes\default\images\close.png" />
+    <Content Include="AdminUI\ueditor\themes\default\images\icons.gif" />
+    <Content Include="AdminUI\ueditor\themes\default\images\icons.png" />
+    <Content Include="AdminUI\ueditor\themes\default\images\ok.gif" />
+    <Content Include="AdminUI\ueditor\themes\default\images\pop-bg.png" />
+    <Content Include="AdminUI\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="AdminUI\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="AdminUI\ueditor\third-party\jquery.min.js" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\STIXFontLicense2010.txt" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.svg" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.svg" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.svg" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.svg" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\font\Symbola.svg" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\mathquill.css" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\mathquill.js" />
+    <Content Include="AdminUI\ueditor\third-party\mathquill\mathquill.min.js" />
+    <Content Include="AdminUI\ueditor\umeditor.config.js" />
+    <Content Include="AdminUI\ueditor\umeditor.js" />
+    <Content Include="AdminUI\ueditor\umeditor.min.js" />
+    <Content Include="AdminUI\Upzhidu.aspx" />
+    <Content Include="AdminUI\Usercanupwlxxjisuan.aspx" />
+    <Content Include="AdminUI\UserInfoAdmin.aspx" />
+    <Content Include="AdminUI\UserInfoManager.aspx" />
+    <Content Include="AdminUI\UserLoginInfo.aspx" />
+    <Content Include="AdminUI\utf8_net\dialogs\anchor\anchor.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\attachment.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\attachment.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\attachment.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\alignicon.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\bg.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\file-icons.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\icons.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\icons.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\image.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\progress.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\success.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\attachment\images\success.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\background\background.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\background\background.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\background\background.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\background\images\bg.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\background\images\success.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\chart.config.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\charts.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\charts.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\charts.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\images\charts0.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\images\charts1.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\images\charts2.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\images\charts3.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\images\charts4.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\charts\images\charts5.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\emotion.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\emotion.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\emotion.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\0.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\bface.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\cface.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\fface.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\tface.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\wface.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\emotion\images\yface.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\gmap\gmap.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\help\help.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\help\help.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\help\help.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\image.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\image.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\image.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\images\alignicon.jpg" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\images\bg.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\images\icons.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\images\icons.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\images\image.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\images\progress.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\images\success.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\image\images\success.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\insertframe\insertframe.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\internal.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\link\link.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\map\map.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\map\show.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\music\music.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\music\music.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\music\music.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\preview\preview.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\addimg.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\brush.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\delimg.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\empty.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\eraser.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\redo.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\redoH.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\scale.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\size.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\undo.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\images\undoH.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\scrawl.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\scrawl.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\scrawl\scrawl.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\spechars\spechars.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\spechars\spechars.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\table\dragicon.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\table\edittable.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\table\edittable.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\table\edittable.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\table\edittd.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\table\edittip.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\config.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\images\bg.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\images\pre0.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\images\pre1.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\images\pre2.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\images\pre3.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\images\pre4.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\template.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\template.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\template\template.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\bg.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\center_focus.jpg" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\file-icons.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\file-icons.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\icons.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\icons.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\image.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\left_focus.jpg" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\none_focus.jpg" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\progress.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\right_focus.jpg" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\success.gif" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\images\success.png" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\video.css" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\video.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\video\video.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\webapp\webapp.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="AdminUI\utf8_net\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="AdminUI\utf8_net\dialogs\wordimage\tangram.js" />
+    <Content Include="AdminUI\utf8_net\dialogs\wordimage\wordimage.html" />
+    <Content Include="AdminUI\utf8_net\dialogs\wordimage\wordimage.js" />
+    <Content Include="AdminUI\utf8_net\index.html" />
+    <Content Include="AdminUI\utf8_net\lang\en\en.js" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\addimage.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\background.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\button.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\copy.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\deletedisable.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\deleteenable.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\listbackground.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\localimage.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\music.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\rotateleftdisable.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\rotateleftenable.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\rotaterightdisable.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\rotaterightenable.png" />
+    <Content Include="AdminUI\utf8_net\lang\en\images\upload.png" />
+    <Content Include="AdminUI\utf8_net\lang\zh-cn\images\copy.png" />
+    <Content Include="AdminUI\utf8_net\lang\zh-cn\images\localimage.png" />
+    <Content Include="AdminUI\utf8_net\lang\zh-cn\images\music.png" />
+    <Content Include="AdminUI\utf8_net\lang\zh-cn\images\upload.png" />
+    <Content Include="AdminUI\utf8_net\lang\zh-cn\zh-cn.js" />
+    <Content Include="AdminUI\utf8_net\net\Bin\Newtonsoft.Json.dll" />
+    <Content Include="AdminUI\utf8_net\net\Bin\Newtonsoft.Json.pdb" />
+    <Content Include="AdminUI\utf8_net\net\Bin\Newtonsoft.Json.xml" />
+    <Content Include="AdminUI\utf8_net\net\net.sln" />
+    <Content Include="AdminUI\utf8_net\themes\default\css\ueditor.css" />
+    <Content Include="AdminUI\utf8_net\themes\default\css\ueditor.min.css" />
+    <Content Include="AdminUI\utf8_net\themes\default\dialogbase.css" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\anchor.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\arrow.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\arrow_down.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\arrow_up.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\button-bg.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\cancelbutton.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\charts.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\cursor_h.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\cursor_h.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\cursor_v.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\cursor_v.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\dialog-title-bg.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\filescan.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\highlighted.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\icons-all.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\icons.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\icons.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\loaderror.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\loading.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\lock.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\pagebreak.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\scale.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\sortable.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\spacer.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\sparator_v.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\table-cell-align.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\toolbar_bg.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\unhighlighted.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\upload.png" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\videologo.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\word.gif" />
+    <Content Include="AdminUI\utf8_net\themes\default\images\wordpaste.png" />
+    <Content Include="AdminUI\utf8_net\themes\iframe.css" />
+    <Content Include="AdminUI\utf8_net\third-party\codemirror\codemirror.css" />
+    <Content Include="AdminUI\utf8_net\third-party\codemirror\codemirror.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\highcharts-more.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\highcharts.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\highcharts.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\annotations.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\data.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\data.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\exporting.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\funnel.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\map.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\map.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\themes\gray.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\themes\grid.js" />
+    <Content Include="AdminUI\utf8_net\third-party\highcharts\themes\skies.js" />
+    <Content Include="AdminUI\utf8_net\third-party\jquery-1.10.2.js" />
+    <Content Include="AdminUI\utf8_net\third-party\jquery-1.10.2.min.js" />
+    <Content Include="AdminUI\utf8_net\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="AdminUI\utf8_net\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="AdminUI\utf8_net\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="AdminUI\utf8_net\third-party\video-js\font\vjs.svg" />
+    <Content Include="AdminUI\utf8_net\third-party\video-js\video-js.css" />
+    <Content Include="AdminUI\utf8_net\third-party\video-js\video-js.min.css" />
+    <Content Include="AdminUI\utf8_net\third-party\video-js\video-js.swf" />
+    <Content Include="AdminUI\utf8_net\third-party\video-js\video.dev.js" />
+    <Content Include="AdminUI\utf8_net\third-party\video-js\video.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\Uploader.swf" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.css" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.min.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="AdminUI\utf8_net\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="AdminUI\utf8_net\third-party\xss.min.js" />
+    <Content Include="AdminUI\utf8_net\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="AdminUI\utf8_net\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="AdminUI\utf8_net\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="AdminUI\utf8_net\ueditor.all.js" />
+    <Content Include="AdminUI\utf8_net\ueditor.all.min.js" />
+    <Content Include="AdminUI\utf8_net\ueditor.config.js" />
+    <Content Include="AdminUI\utf8_net\ueditor.parse.js" />
+    <Content Include="AdminUI\utf8_net\ueditor.parse.min.js" />
+    <Content Include="AdminUI\WlxsManager.aspx" />
+    <Content Include="AdminUI\Wlxxup.aspx" />
+    <Content Include="AdminUI\Xlxwdengji.aspx" />
+    <Content Include="AdminUI\XlxwManager.aspx" />
+    <Content Include="AdminUI\Xuelixuewei.aspx" />
+    <Content Include="css\default.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\style.css" />
+    <Content Include="DepartmentUI\AddJntrainrenyuan.aspx" />
+    <Content Include="DepartmentUI\AddJwTrain.aspx" />
+    <Content Include="DepartmentUI\css2\style.css" />
+    <Content Include="DepartmentUI\css\CSS.css" />
+    <Content Include="DepartmentUI\css\demo.css" />
+    <Content Include="DepartmentUI\css\pageBar.css" />
+    <Content Include="DepartmentUI\css\select.css" />
+    <Content Include="DepartmentUI\css\style.css" />
+    <Content Include="DepartmentUI\DepartmentIndex.html" />
+    <Content Include="DepartmentUI\DepartmentleftMenu.html" />
+    <Content Include="DepartmentUI\DepartmentMain.html" />
+    <Content Include="DepartmentUI\DepartmentNewnotice.aspx" />
+    <Content Include="DepartmentUI\DepartmentShowNoticeDetail.aspx" />
+    <Content Include="DepartmentUI\Departmenttop.html" />
+    <Content Include="DepartmentUI\DepartmentTrain.aspx" />
+    <Content Include="DepartmentUI\departmentXiuGaiMiMa.asmx" />
+    <Content Include="DepartmentUI\departmentXiuGaiMiMa.aspx" />
+    <Content Include="DepartmentUI\Departmentzhidulist.aspx" />
+    <Content Include="DepartmentUI\downloadjwcailiao.aspx" />
+    <Content Include="DepartmentUI\downloadzhidu.aspx" />
+    <Content Include="DepartmentUI\Etmsplan.aspx" />
+    <Content Include="DepartmentUI\images\001.jpg" />
+    <Content Include="DepartmentUI\images\404.png" />
+    <Content Include="DepartmentUI\images\add.png" />
+    <Content Include="DepartmentUI\images\btnbg.png" />
+    <Content Include="DepartmentUI\images\btnbg1.png" />
+    <Content Include="DepartmentUI\images\btnbg2.png" />
+    <Content Include="DepartmentUI\images\buttonbg.png" />
+    <Content Include="DepartmentUI\images\c01.png" />
+    <Content Include="DepartmentUI\images\c02.png" />
+    <Content Include="DepartmentUI\images\c03.png" />
+    <Content Include="DepartmentUI\images\cbg.png" />
+    <Content Include="DepartmentUI\images\clist.png" />
+    <Content Include="DepartmentUI\images\close.png" />
+    <Content Include="DepartmentUI\images\close1.png" />
+    <Content Include="DepartmentUI\images\cloud.png" />
+    <Content Include="DepartmentUI\images\d01.png" />
+    <Content Include="DepartmentUI\images\d02.png" />
+    <Content Include="DepartmentUI\images\d03.png" />
+    <Content Include="DepartmentUI\images\d04.png" />
+    <Content Include="DepartmentUI\images\d05.png" />
+    <Content Include="DepartmentUI\images\d06.png" />
+    <Content Include="DepartmentUI\images\d07.png" />
+    <Content Include="DepartmentUI\images\diskbg.png" />
+    <Content Include="DepartmentUI\images\dp.png" />
+    <Content Include="DepartmentUI\images\f01.png" />
+    <Content Include="DepartmentUI\images\f02.png" />
+    <Content Include="DepartmentUI\images\f03.png" />
+    <Content Include="DepartmentUI\images\f04.png" />
+    <Content Include="DepartmentUI\images\f05.png" />
+    <Content Include="DepartmentUI\images\f06.png" />
+    <Content Include="DepartmentUI\images\help.png" />
+    <Content Include="DepartmentUI\images\i01.png" />
+    <Content Include="DepartmentUI\images\i02.png" />
+    <Content Include="DepartmentUI\images\i03.png" />
+    <Content Include="DepartmentUI\images\i04.png" />
+    <Content Include="DepartmentUI\images\i05.png" />
+    <Content Include="DepartmentUI\images\i06.png" />
+    <Content Include="DepartmentUI\images\i07.png" />
+    <Content Include="DepartmentUI\images\i08.png" />
+    <Content Include="DepartmentUI\images\i09.png" />
+    <Content Include="DepartmentUI\images\iadd.png" />
+    <Content Include="DepartmentUI\images\ibtnbg.png" />
+    <Content Include="DepartmentUI\images\ico01.png" />
+    <Content Include="DepartmentUI\images\ico02.png" />
+    <Content Include="DepartmentUI\images\ico03.png" />
+    <Content Include="DepartmentUI\images\ico04.png" />
+    <Content Include="DepartmentUI\images\ico05.png" />
+    <Content Include="DepartmentUI\images\ico06.png" />
+    <Content Include="DepartmentUI\images\icon01.png" />
+    <Content Include="DepartmentUI\images\icon02.png" />
+    <Content Include="DepartmentUI\images\icon03.png" />
+    <Content Include="DepartmentUI\images\icon04.png" />
+    <Content Include="DepartmentUI\images\icon05.png" />
+    <Content Include="DepartmentUI\images\icon06.png" />
+    <Content Include="DepartmentUI\images\img01.png" />
+    <Content Include="DepartmentUI\images\img02.png" />
+    <Content Include="DepartmentUI\images\img03.png" />
+    <Content Include="DepartmentUI\images\img04.png" />
+    <Content Include="DepartmentUI\images\img05.png" />
+    <Content Include="DepartmentUI\images\img06.png" />
+    <Content Include="DepartmentUI\images\img07.png" />
+    <Content Include="DepartmentUI\images\img08.png" />
+    <Content Include="DepartmentUI\images\img09.png" />
+    <Content Include="DepartmentUI\images\img10.png" />
+    <Content Include="DepartmentUI\images\img11.png" />
+    <Content Include="DepartmentUI\images\img12.png" />
+    <Content Include="DepartmentUI\images\img13.png" />
+    <Content Include="DepartmentUI\images\img14.png" />
+    <Content Include="DepartmentUI\images\img15.png" />
+    <Content Include="DepartmentUI\images\inputbg.gif" />
+    <Content Include="DepartmentUI\images\itabbg.png" />
+    <Content Include="DepartmentUI\images\itabbg1.png" />
+    <Content Include="DepartmentUI\images\leftico.png" />
+    <Content Include="DepartmentUI\images\leftico01.png" />
+    <Content Include="DepartmentUI\images\leftico02.png" />
+    <Content Include="DepartmentUI\images\leftico03.png" />
+    <Content Include="DepartmentUI\images\leftico04.png" />
+    <Content Include="DepartmentUI\images\leftline.gif" />
+    <Content Include="DepartmentUI\images\leftmenubg.gif" />
+    <Content Include="DepartmentUI\images\lefttop.gif" />
+    <Content Include="DepartmentUI\images\libg.png" />
+    <Content Include="DepartmentUI\images\light.png" />
+    <Content Include="DepartmentUI\images\line.gif" />
+    <Content Include="DepartmentUI\images\line1.png" />
+    <Content Include="DepartmentUI\images\list.gif" />
+    <Content Include="DepartmentUI\images\list1.gif" />
+    <Content Include="DepartmentUI\images\list2.png" />
+    <Content Include="DepartmentUI\images\loginbg1.png" />
+    <Content Include="DepartmentUI\images\loginbg2.png" />
+    <Content Include="DepartmentUI\images\loginbg3.png" />
+    <Content Include="DepartmentUI\images\logininfo.png" />
+    <Content Include="DepartmentUI\images\loginlogo.png" />
+    <Content Include="DepartmentUI\images\loginpassword.png" />
+    <Content Include="DepartmentUI\images\loginsj.png" />
+    <Content Include="DepartmentUI\images\loginuser.png" />
+    <Content Include="DepartmentUI\images\logo.png" />
+    <Content Include="DepartmentUI\images\msg.png" />
+    <Content Include="DepartmentUI\images\navbg.png" />
+    <Content Include="DepartmentUI\images\next.gif" />
+    <Content Include="DepartmentUI\images\pre.gif" />
+    <Content Include="DepartmentUI\images\px.gif" />
+    <Content Include="DepartmentUI\images\righttop.gif" />
+    <Content Include="DepartmentUI\images\rlist.gif" />
+    <Content Include="DepartmentUI\images\search.png" />
+    <Content Include="DepartmentUI\images\sj.png" />
+    <Content Include="DepartmentUI\images\sun.png" />
+    <Content Include="DepartmentUI\images\t01.png" />
+    <Content Include="DepartmentUI\images\t02.png" />
+    <Content Include="DepartmentUI\images\t03.png" />
+    <Content Include="DepartmentUI\images\t04.png" />
+    <Content Include="DepartmentUI\images\t05.png" />
+    <Content Include="DepartmentUI\images\tbg.png" />
+    <Content Include="DepartmentUI\images\tcbg.gif" />
+    <Content Include="DepartmentUI\images\th.gif" />
+    <Content Include="DepartmentUI\images\ticon.png" />
+    <Content Include="DepartmentUI\images\time.png" />
+    <Content Include="DepartmentUI\images\toolbg.gif" />
+    <Content Include="DepartmentUI\images\topbg.gif" />
+    <Content Include="DepartmentUI\images\topleft.jpg" />
+    <Content Include="DepartmentUI\images\topright.jpg" />
+    <Content Include="DepartmentUI\images\ub1.png" />
+    <Content Include="DepartmentUI\images\uew_icon.png" />
+    <Content Include="DepartmentUI\images\uew_icon_hover.png" />
+    <Content Include="DepartmentUI\images\ulist.png" />
+    <Content Include="DepartmentUI\images\user.png" />
+    <Content Include="DepartmentUI\images\userbg.png" />
+    <Content Include="DepartmentUI\js\cloud.js" />
+    <Content Include="DepartmentUI\js\format+zh_CN,default,corechart.I.js" />
+    <Content Include="DepartmentUI\js\jquery.ba-resize.min.js" />
+    <Content Include="DepartmentUI\js\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="DepartmentUI\js\jquery.idTabs.min.js" />
+    <Content Include="DepartmentUI\js\jquery.js" />
+    <Content Include="DepartmentUI\js\jsapi.js" />
+    <Content Include="DepartmentUI\js\PIE.htc" />
+    <Content Include="DepartmentUI\js\select-ui.min.js" />
+    <Content Include="DepartmentUI\Juneiaddrenyuan.aspx" />
+    <Content Include="DepartmentUI\Juneitrain.aspx" />
+    <Content Include="DepartmentUI\Juneitrainchaxun.aspx" />
+    <Content Include="DepartmentUI\JuneitrainInquiry1.aspx" />
+    <Content Include="DepartmentUI\Juneitrainrenyuan.aspx" />
+    <Content Include="DepartmentUI\JuneitrainTj.aspx" />
+    <Content Include="DepartmentUI\JuwaitrainInquiry.aspx" />
+    <Content Include="DepartmentUI\JwTrainTj.aspx" />
+    <Content Include="DepartmentUI\Showdepartjndetail.aspx" />
+    <Content Include="DepartmentUI\Showjndetail.aspx" />
+    <Content Include="DepartmentUI\ShowjwtrainDetail.aspx" />
+    <Content Include="DepartmentUI\Showxlxwdetail.aspx" />
+    <Content Include="DepartmentUI\Spxlxw.aspx" />
+    <Content Include="DepartmentUI\src\jquery.gvChart-1.0.1.js" />
+    <Content Include="DepartmentUI\src\JuneitrainInquiry.aspx" />
+    <Content Include="DepartmentUI\JuneitrainInquiry.aspx" />
+    <Content Include="DepartmentUI\XuelixueweiInquiry.aspx" />
+    <Content Include="DepartmentUI\XuelixueweiSp.aspx" />
+    <Content Include="Help.html" />
+    <Content Include="images\bar1.gif" />
+    <Content Include="images\body_background.png" />
+    <Content Include="images\border_bg.png" />
+    <Content Include="images\border_end.png" />
+    <Content Include="images\BoxOver_bd.png" />
+    <Content Include="images\btu_ok.png" />
+    <Content Include="images\button_login2.gif" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\content_li_top.png" />
+    <Content Include="images\Folder_bigbtu.png" />
+    <Content Include="images\ico.gif" />
+    <Content Include="images\left_tabid_cnt_top.png" />
+    <Content Include="images\left_tab_Selected.gif" />
+    <Content Include="images\left_tab_Selectedno.gif" />
+    <Content Include="images\line_2.gif" />
+    <Content Include="images\login-welcome.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\manage_arrow_down.gif" />
+    <Content Include="images\manage_arrow_left.gif" />
+    <Content Include="images\manage_arrow_right.gif" />
+    <Content Include="images\manage_arrow_up.gif" />
+    <Content Include="images\manage_back.gif" />
+    <Content Include="images\manage_top_bg.gif" />
+    <Content Include="images\minus.gif" />
+    <Content Include="images\nopic.gif" />
+    <Content Include="images\offline.gif" />
+    <Content Include="images\oicq.gif" />
+    <Content Include="images\online.gif" />
+    <Content Include="images\open.gif" />
+    <Content Include="images\plus.gif" />
+    <Content Include="images\progress.jpg" />
+    <Content Include="images\progress1.jpg" />
+    <Content Include="images\quote.gif" />
+    <Content Include="images\re.gif" />
+    <Content Include="images\Setting_TabPage2.png" />
+    <Content Include="images\skinpic.png" />
+    <Content Include="images\Skin_onmouseout_bg.gif" />
+    <Content Include="images\Skin_onmouseout_bg.png" />
+    <Content Include="images\Skin_onmouseover_bg.gif" />
+    <Content Include="images\Skin_onmouseover_bg.png" />
+    <Content Include="images\skin_used.png" />
+    <Content Include="images\sword03.gif" />
+    <Content Include="images\tab.gif" />
+    <Content Include="images\Template_bg.png" />
+    <Content Include="images\used.png" />
+    <Content Include="images\UserIco_bg.png" />
+    <Content Include="images\user_btu_left.png" />
+    <Content Include="images\user_btu_right.png" />
+    <Content Include="images\user_dleft_tab7.png" />
+    <Content Include="images\user_err.gif" />
+    <Content Include="images\user_login_01.gif" />
+    <Content Include="images\user_login_02.gif" />
+    <Content Include="images\user_login_03.gif" />
+    <Content Include="images\user_login_04.gif" />
+    <Content Include="images\user_login_05.gif" />
+    <Content Include="images\user_msg.gif" />
+    <Content Include="images\user_post_input.png" />
+    <Content Include="images\user_post_inputtxt.png" />
+    <Content Include="images\user_post_inputtxt1.png" />
+    <Content Include="images\user_post_title_bg.png" />
+    <Content Include="images\user_post_top_bg.png" />
+    <Content Include="images\user_setting_title_tab_bg.png" />
+    <Content Include="images\user_suc.gif" />
+    <Content Include="images\user_team_bg.png" />
+    <Content Include="images\user_team_top.png" />
+    <Content Include="images\win_top.png" />
+    <Content Include="images\worldmap.jpg" />
+    <Content Include="images\X.gif" />
+    <Content Include="js\jquery-1.4.1.js" />
+    <Content Include="js\leftmenu.js" />
+    <Content Include="js\menu.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="login_files\login_1.gif" />
+    <Content Include="login_files\login_2.jpg" />
+    <Content Include="login_files\login_3.jpg" />
+    <Content Include="login_files\login_button.gif" />
+    <Content Include="Style\11.gif" />
+    <Content Include="Style\12.gif" />
+    <Content Include="Style\13.gif" />
+    <Content Include="Style\14.gif" />
+    <Content Include="Style\15.gif" />
+    <Content Include="Style\16.gif" />
+    <Content Include="Style\17.gif" />
+    <Content Include="Style\18.gif" />
+    <Content Include="Style\19.gif" />
+    <Content Include="Style\1a.gif" />
+    <Content Include="Style\1b.gif" />
+    <Content Include="Style\1c.gif" />
+    <Content Include="Style\1d.gif" />
+    <Content Include="Style\1e.gif" />
+    <Content Include="Style\1f.gif" />
+    <Content Include="Style\21.gif" />
+    <Content Include="Style\218.gif" />
+    <Content Include="Style\22.gif" />
+    <Content Include="Style\23.gif" />
+    <Content Include="Style\24.gif" />
+    <Content Include="Style\25.gif" />
+    <Content Include="Style\26.gif" />
+    <Content Include="Style\27.gif" />
+    <Content Include="Style\28.gif" />
+    <Content Include="Style\29.gif" />
+    <Content Include="Style\31.gif" />
+    <Content Include="Style\32.gif" />
+    <Content Include="Style\33.gif" />
+    <Content Include="Style\34.gif" />
+    <Content Include="Style\41.gif" />
+    <Content Include="Style\42.gif" />
+    <Content Include="Style\43.gif" />
+    <Content Include="Style\44.gif" />
+    <Content Include="Style\51.gif" />
+    <Content Include="Style\52.gif" />
+    <Content Include="Style\53.gif" />
+    <Content Include="Style\54.gif" />
+    <Content Include="Style\601.gif" />
+    <Content Include="Style\61.gif" />
+    <Content Include="Style\62.gif" />
+    <Content Include="Style\63.gif" />
+    <Content Include="Style\64.gif" />
+    <Content Include="Style\65.gif" />
+    <Content Include="Style\66.gif" />
+    <Content Include="Style\67.gif" />
+    <Content Include="Style\701.gif" />
+    <Content Include="Style\702.gif" />
+    <Content Include="Style\71.gif" />
+    <Content Include="Style\arrow.gif" />
+    <Content Include="Style\body_background.png" />
+    <Content Include="Style\border_bg.png" />
+    <Content Include="Style\border_end.png" />
+    <Content Include="Style\btu_ok.png" />
+    <Content Include="Style\close.gif" />
+    <Content Include="Style\content_li_top.png" />
+    <Content Include="Style\default.css" />
+    <Content Include="Style\Folder_bigbtu.png" />
+    <Content Include="Style\left_tabid_cnt_top.png" />
+    <Content Include="Style\left_tab_Selected.gif" />
+    <Content Include="Style\left_tab_Selectedno.gif" />
+    <Content Include="Style\line_2.gif" />
+    <Content Include="Style\logo.png" />
+    <Content Include="Style\menu.js" />
+    <Content Include="Style\open.gif" />
+    <Content Include="Style\option.gif" />
+    <Content Include="Style\progress.jpg" />
+    <Content Include="Style\progress1.jpg" />
+    <Content Include="Style\quote.gif" />
+    <Content Include="Style\skinpic.png" />
+    <Content Include="Style\skin_used.png" />
+    <Content Include="Style\style.css" />
+    <Content Include="Style\tab.gif" />
+    <Content Include="Style\used.png" />
+    <Content Include="Style\user_btu_left.png" />
+    <Content Include="Style\user_btu_right.png" />
+    <Content Include="Style\user_post_input.png" />
+    <Content Include="Style\user_post_inputtxt.png" />
+    <Content Include="Style\user_post_inputtxt1.png" />
+    <Content Include="Style\user_post_title_bg.png" />
+    <Content Include="Style\user_post_top_bg.png" />
+    <Content Include="Style\user_setting_title_tab_bg.png" />
+    <Content Include="Style\user_team_top.png" />
+    <Content Include="Style\win_top.png" />
+    <Content Include="UserUI\bin\zzs.sddj.Bll.dll" />
+    <Content Include="UserUI\bin\zzs.sddj.Bll.pdb" />
+    <Content Include="UserUI\bin\zzs.sddj.Common.dll" />
+    <Content Include="UserUI\bin\zzs.sddj.Common.pdb" />
+    <Content Include="UserUI\bin\zzs.sddj.Dal.dll" />
+    <Content Include="UserUI\bin\zzs.sddj.Dal.pdb" />
+    <Content Include="UserUI\bin\zzs.sddj.Model.dll" />
+    <Content Include="UserUI\bin\zzs.sddj.Model.pdb" />
+    <Content Include="UserUI\bin\zzs.sddj.Webapp.dll" />
+    <Content Include="UserUI\bin\zzs.sddj.Webapp.pdb" />
+    <Content Include="UserUI\css\demo.css" />
+    <Content Include="UserUI\css\pageBar.css" />
+    <Content Include="UserUI\css\select.css" />
+    <Content Include="UserUI\css\style.css" />
+    <Content Include="UserUI\downloadzhidu.aspx" />
+    <Content Include="UserUI\editor\kindeditor.js" />
+    <Content Include="UserUI\editor\plugins\about.html" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_01.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_02.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_03.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_04.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_05.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_06.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_07.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_08.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_09.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_10.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_11.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_12.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_13.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_14.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_15.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_16.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_17.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_18.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_19.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_20.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_21.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_22.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_23.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_24.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_25.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_26.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_27.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_28.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_29.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_30.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_31.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_32.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_33.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_34.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_35.gif" />
+    <Content Include="UserUI\editor\plugins\emoticons\etc_36.gif" />
+    <Content Include="UserUI\editor\plugins\flash.html" />
+    <Content Include="UserUI\editor\plugins\image.html" />
+    <Content Include="UserUI\editor\plugins\link.html" />
+    <Content Include="UserUI\editor\plugins\media.html" />
+    <Content Include="UserUI\editor\plugins\plainpaste.html" />
+    <Content Include="UserUI\editor\plugins\remote_image.html" />
+    <Content Include="UserUI\editor\plugins\wordpaste.html" />
+    <Content Include="UserUI\editor\skins\default.css" />
+    <Content Include="UserUI\editor\skins\default.gif" />
+    <Content Include="UserUI\editor\skins\div.gif" />
+    <Content Include="UserUI\editor\skins\dl.gif" />
+    <Content Include="UserUI\editor\skins\editor.css" />
+    <Content Include="UserUI\editor\skins\ol.gif" />
+    <Content Include="UserUI\editor\skins\p.gif" />
+    <Content Include="UserUI\editor\skins\tinymce.css" />
+    <Content Include="UserUI\editor\skins\tinymce.gif" />
+    <Content Include="UserUI\editor\skins\ul.gif" />
+    <Content Include="UserUI\Help.html" />
+    <Content Include="UserUI\images\001.jpg" />
+    <Content Include="UserUI\images\404.png" />
+    <Content Include="UserUI\images\add.png" />
+    <Content Include="UserUI\images\btnbg.png" />
+    <Content Include="UserUI\images\btnbg1.png" />
+    <Content Include="UserUI\images\btnbg2.png" />
+    <Content Include="UserUI\images\buttonbg.png" />
+    <Content Include="UserUI\images\c01.png" />
+    <Content Include="UserUI\images\c02.png" />
+    <Content Include="UserUI\images\c03.png" />
+    <Content Include="UserUI\images\cbg.png" />
+    <Content Include="UserUI\images\clist.png" />
+    <Content Include="UserUI\images\close.png" />
+    <Content Include="UserUI\images\close1.png" />
+    <Content Include="UserUI\images\cloud.png" />
+    <Content Include="UserUI\images\d01.png" />
+    <Content Include="UserUI\images\d02.png" />
+    <Content Include="UserUI\images\d03.png" />
+    <Content Include="UserUI\images\d04.png" />
+    <Content Include="UserUI\images\d05.png" />
+    <Content Include="UserUI\images\d06.png" />
+    <Content Include="UserUI\images\d07.png" />
+    <Content Include="UserUI\images\diskbg.png" />
+    <Content Include="UserUI\images\dp.png" />
+    <Content Include="UserUI\images\f01.png" />
+    <Content Include="UserUI\images\f02.png" />
+    <Content Include="UserUI\images\f03.png" />
+    <Content Include="UserUI\images\f04.png" />
+    <Content Include="UserUI\images\f05.png" />
+    <Content Include="UserUI\images\f06.png" />
+    <Content Include="UserUI\images\help.png" />
+    <Content Include="UserUI\images\i01.png" />
+    <Content Include="UserUI\images\i02.png" />
+    <Content Include="UserUI\images\i03.png" />
+    <Content Include="UserUI\images\i04.png" />
+    <Content Include="UserUI\images\i05.png" />
+    <Content Include="UserUI\images\i06.png" />
+    <Content Include="UserUI\images\i07.png" />
+    <Content Include="UserUI\images\i08.png" />
+    <Content Include="UserUI\images\i09.png" />
+    <Content Include="UserUI\images\iadd.png" />
+    <Content Include="UserUI\images\ibtnbg.png" />
+    <Content Include="UserUI\images\ico01.png" />
+    <Content Include="UserUI\images\ico02.png" />
+    <Content Include="UserUI\images\ico03.png" />
+    <Content Include="UserUI\images\ico04.png" />
+    <Content Include="UserUI\images\ico05.png" />
+    <Content Include="UserUI\images\ico06.png" />
+    <Content Include="UserUI\images\icon01.png" />
+    <Content Include="UserUI\images\icon02.png" />
+    <Content Include="UserUI\images\icon03.png" />
+    <Content Include="UserUI\images\icon04.png" />
+    <Content Include="UserUI\images\icon05.png" />
+    <Content Include="UserUI\images\icon06.png" />
+    <Content Include="UserUI\images\img01.png" />
+    <Content Include="UserUI\images\img02.png" />
+    <Content Include="UserUI\images\img03.png" />
+    <Content Include="UserUI\images\img04.png" />
+    <Content Include="UserUI\images\img05.png" />
+    <Content Include="UserUI\images\img06.png" />
+    <Content Include="UserUI\images\img07.png" />
+    <Content Include="UserUI\images\img08.png" />
+    <Content Include="UserUI\images\img09.png" />
+    <Content Include="UserUI\images\img10.png" />
+    <Content Include="UserUI\images\img11.png" />
+    <Content Include="UserUI\images\img12.png" />
+    <Content Include="UserUI\images\img13.png" />
+    <Content Include="UserUI\images\img14.png" />
+    <Content Include="UserUI\images\img15.png" />
+    <Content Include="UserUI\images\inputbg.gif" />
+    <Content Include="UserUI\images\itabbg.png" />
+    <Content Include="UserUI\images\itabbg1.png" />
+    <Content Include="UserUI\images\leftico.png" />
+    <Content Include="UserUI\images\leftico01.png" />
+    <Content Include="UserUI\images\leftico02.png" />
+    <Content Include="UserUI\images\leftico03.png" />
+    <Content Include="UserUI\images\leftico04.png" />
+    <Content Include="UserUI\images\leftline.gif" />
+    <Content Include="UserUI\images\leftmenubg.gif" />
+    <Content Include="UserUI\images\lefttop.gif" />
+    <Content Include="UserUI\images\libg.png" />
+    <Content Include="UserUI\images\light.png" />
+    <Content Include="UserUI\images\line.gif" />
+    <Content Include="UserUI\images\line1.png" />
+    <Content Include="UserUI\images\list.gif" />
+    <Content Include="UserUI\images\list1.gif" />
+    <Content Include="UserUI\images\list2.png" />
+    <Content Include="UserUI\images\loginbg1.png" />
+    <Content Include="UserUI\images\loginbg2.png" />
+    <Content Include="UserUI\images\loginbg3.png" />
+    <Content Include="UserUI\images\logininfo.png" />
+    <Content Include="UserUI\images\loginlogo.png" />
+    <Content Include="UserUI\images\loginpassword.png" />
+    <Content Include="UserUI\images\loginsj.png" />
+    <Content Include="UserUI\images\loginuser.png" />
+    <Content Include="UserUI\images\logo.png" />
+    <Content Include="UserUI\images\msg.png" />
+    <Content Include="UserUI\images\navbg.png" />
+    <Content Include="UserUI\images\next.gif" />
+    <Content Include="UserUI\images\pre.gif" />
+    <Content Include="UserUI\images\px.gif" />
+    <Content Include="UserUI\images\red_asterisk.png" />
+    <Content Include="UserUI\images\righttop.gif" />
+    <Content Include="UserUI\images\rlist.gif" />
+    <Content Include="UserUI\images\search.png" />
+    <Content Include="UserUI\images\sj.png" />
+    <Content Include="UserUI\images\sun.png" />
+    <Content Include="UserUI\images\t01.png" />
+    <Content Include="UserUI\images\t02.png" />
+    <Content Include="UserUI\images\t03.png" />
+    <Content Include="UserUI\images\t04.png" />
+    <Content Include="UserUI\images\t05.png" />
+    <Content Include="UserUI\images\tbg.png" />
+    <Content Include="UserUI\images\tcbg.gif" />
+    <Content Include="UserUI\images\th.gif" />
+    <Content Include="UserUI\images\ticon.png" />
+    <Content Include="UserUI\images\time.png" />
+    <Content Include="UserUI\images\toolbg.gif" />
+    <Content Include="UserUI\images\topbg.gif" />
+    <Content Include="UserUI\images\topleft.jpg" />
+    <Content Include="UserUI\images\topright.jpg" />
+    <Content Include="UserUI\images\ub1.png" />
+    <Content Include="UserUI\images\uew_icon.png" />
+    <Content Include="UserUI\images\uew_icon_hover.png" />
+    <Content Include="UserUI\images\ulist.png" />
+    <Content Include="UserUI\images\user.png" />
+    <Content Include="UserUI\images\userbg.png" />
+    <Content Include="UserUI\js\cloud.js" />
+    <Content Include="UserUI\js\format+zh_CN,default,corechart.I.js" />
+    <Content Include="UserUI\js\jquery.ba-resize.min.js" />
+    <Content Include="UserUI\js\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="UserUI\js\jquery.idTabs.min.js" />
+    <Content Include="UserUI\js\jquery.js" />
+    <Content Include="UserUI\js\jsapi.js" />
+    <Content Include="UserUI\js\leftmenu.js" />
+    <Content Include="UserUI\js\menu.js" />
+    <Content Include="UserUI\js\PIE.htc" />
+    <Content Include="UserUI\js\select-ui.min.js" />
+    <Content Include="UserUI\Juwaitrain.aspx" />
+    <Content Include="UserUI\Juwaitrain.htm" />
+    <Content Include="UserUI\login_files\login_1.gif" />
+    <Content Include="UserUI\login_files\login_2.jpg" />
+    <Content Include="UserUI\login_files\login_3.jpg" />
+    <Content Include="UserUI\login_files\login_button.gif" />
+    <Content Include="UserUI\obj\Debug\zzs.sddj.Webapp.csproj.FileListAbsolute.txt" />
+    <Content Include="UserUI\obj\Debug\zzs.sddj.Webapp.dll" />
+    <Content Include="UserUI\obj\Debug\zzs.sddj.Webapp.pdb" />
+    <Content Include="UserUI\personjn.aspx" />
+    <Content Include="UserUI\personjw.aspx" />
+    <Content Include="UserUI\personxlxw.aspx" />
+    <Content Include="UserUI\ShowjnDetail.aspx" />
+    <Content Include="UserUI\Showjntrain.aspx" />
+    <Content Include="UserUI\ShowJuwaicanxunDetail.aspx" />
+    <Content Include="UserUI\ShowjwDetail.aspx" />
+    <Content Include="UserUI\Showjwtrain.aspx" />
+    <Content Include="UserUI\ShowNoticeDetail.aspx" />
+    <Content Include="UserUI\Showxlxwtrain.aspx" />
+    <Content Include="UserUI\src\jquery.gvChart-1.0.1.js" />
+    <Content Include="UserUI\Style\11.gif" />
+    <Content Include="UserUI\Style\12.gif" />
+    <Content Include="UserUI\Style\13.gif" />
+    <Content Include="UserUI\Style\14.gif" />
+    <Content Include="UserUI\Style\15.gif" />
+    <Content Include="UserUI\Style\16.gif" />
+    <Content Include="UserUI\Style\17.gif" />
+    <Content Include="UserUI\Style\18.gif" />
+    <Content Include="UserUI\Style\19.gif" />
+    <Content Include="UserUI\Style\1a.gif" />
+    <Content Include="UserUI\Style\1b.gif" />
+    <Content Include="UserUI\Style\1c.gif" />
+    <Content Include="UserUI\Style\1d.gif" />
+    <Content Include="UserUI\Style\1e.gif" />
+    <Content Include="UserUI\Style\1f.gif" />
+    <Content Include="UserUI\Style\21.gif" />
+    <Content Include="UserUI\Style\218.gif" />
+    <Content Include="UserUI\Style\22.gif" />
+    <Content Include="UserUI\Style\23.gif" />
+    <Content Include="UserUI\Style\24.gif" />
+    <Content Include="UserUI\Style\25.gif" />
+    <Content Include="UserUI\Style\26.gif" />
+    <Content Include="UserUI\Style\27.gif" />
+    <Content Include="UserUI\Style\28.gif" />
+    <Content Include="UserUI\Style\29.gif" />
+    <Content Include="UserUI\Style\31.gif" />
+    <Content Include="UserUI\Style\32.gif" />
+    <Content Include="UserUI\Style\33.gif" />
+    <Content Include="UserUI\Style\34.gif" />
+    <Content Include="UserUI\Style\41.gif" />
+    <Content Include="UserUI\Style\42.gif" />
+    <Content Include="UserUI\Style\43.gif" />
+    <Content Include="UserUI\Style\44.gif" />
+    <Content Include="UserUI\Style\51.gif" />
+    <Content Include="UserUI\Style\52.gif" />
+    <Content Include="UserUI\Style\53.gif" />
+    <Content Include="UserUI\Style\54.gif" />
+    <Content Include="UserUI\Style\601.gif" />
+    <Content Include="UserUI\Style\61.gif" />
+    <Content Include="UserUI\Style\62.gif" />
+    <Content Include="UserUI\Style\63.gif" />
+    <Content Include="UserUI\Style\64.gif" />
+    <Content Include="UserUI\Style\65.gif" />
+    <Content Include="UserUI\Style\66.gif" />
+    <Content Include="UserUI\Style\67.gif" />
+    <Content Include="UserUI\Style\701.gif" />
+    <Content Include="UserUI\Style\702.gif" />
+    <Content Include="UserUI\Style\71.gif" />
+    <Content Include="UserUI\Style\arrow.gif" />
+    <Content Include="UserUI\Style\body_background.png" />
+    <Content Include="UserUI\Style\border_bg.png" />
+    <Content Include="UserUI\Style\border_end.png" />
+    <Content Include="UserUI\Style\btu_ok.png" />
+    <Content Include="UserUI\Style\close.gif" />
+    <Content Include="UserUI\Style\content_li_top.png" />
+    <Content Include="UserUI\Style\default.css" />
+    <Content Include="UserUI\Style\Folder_bigbtu.png" />
+    <Content Include="UserUI\Style\left_tabid_cnt_top.png" />
+    <Content Include="UserUI\Style\left_tab_Selected.gif" />
+    <Content Include="UserUI\Style\left_tab_Selectedno.gif" />
+    <Content Include="UserUI\Style\line_2.gif" />
+    <Content Include="UserUI\Style\logo.png" />
+    <Content Include="UserUI\Style\menu.js" />
+    <Content Include="UserUI\Style\open.gif" />
+    <Content Include="UserUI\Style\option.gif" />
+    <Content Include="UserUI\Style\progress.jpg" />
+    <Content Include="UserUI\Style\progress1.jpg" />
+    <Content Include="UserUI\Style\quote.gif" />
+    <Content Include="UserUI\Style\skinpic.png" />
+    <Content Include="UserUI\Style\skin_used.png" />
+    <Content Include="UserUI\Style\style.css" />
+    <Content Include="UserUI\Style\tab.gif" />
+    <Content Include="UserUI\Style\used.png" />
+    <Content Include="UserUI\Style\user_btu_left.png" />
+    <Content Include="UserUI\Style\user_btu_right.png" />
+    <Content Include="UserUI\Style\user_post_input.png" />
+    <Content Include="UserUI\Style\user_post_inputtxt.png" />
+    <Content Include="UserUI\Style\user_post_inputtxt1.png" />
+    <Content Include="UserUI\Style\user_post_title_bg.png" />
+    <Content Include="UserUI\Style\user_post_top_bg.png" />
+    <Content Include="UserUI\Style\user_setting_title_tab_bg.png" />
+    <Content Include="UserUI\Style\user_team_top.png" />
+    <Content Include="UserUI\Style\win_top.png" />
+    <Content Include="UserUI\tab.html" />
+    <Content Include="UserUI\top.html" />
+    <Content Include="UserUI\upfile\affix\633703946088750000.jpg" />
+    <Content Include="UserUI\UserAllTrainToExcel.aspx" />
+    <Content Include="AdminUI\Usercanupwlxx.aspx" />
+    <Content Include="UserUI\Usercanxunjj.aspx" />
+    <Content Include="UserUI\Usercanxunjn.aspx" />
+    <Content Include="UserUI\Usercanxunjw.aspx" />
+    <Content Include="UserUI\Usercanxunxlxw.aspx" />
+    <Content Include="UserUI\UserControls\session.ascx" />
+    <Content Include="UserUI\Userindex.html" />
+    <Content Include="UserUI\UserleftMenu.html" />
+    <Content Include="UserUI\Usermain.html" />
+    <Content Include="UserUI\UserNewnotice.aspx" />
+    <Content Include="UserUI\UserSystem.html" />
+    <Content Include="UserUI\UserZhidu.aspx" />
+    <Content Include="UserUI\Userzhidulist.aspx" />
+    <Content Include="UserUI\User_download_file.html" />
+    <Content Include="UserUI\WebDemos\flash\main_fla.swf" />
+    <Content Include="UserUI\WebDemos\flash\sub_fla.swf" />
+    <Content Include="UserUI\WebDemos\Html\News.html" />
+    <Content Include="UserUI\WebDemos\Html\Shownews.html" />
+    <Content Include="UserUI\WebDemos\images\bg_a_list_prd_dt.png" />
+    <Content Include="UserUI\WebDemos\images\bg_body.png" />
+    <Content Include="UserUI\WebDemos\images\bg_body_column.png" />
+    <Content Include="UserUI\WebDemos\images\bg_dotlightblue.gif" />
+    <Content Include="UserUI\WebDemos\images\bg_footer_column.png" />
+    <Content Include="UserUI\WebDemos\images\bg_header_Client.jpg" />
+    <Content Include="UserUI\WebDemos\images\bg_header_company.jpg" />
+    <Content Include="UserUI\WebDemos\images\bg_header_Contact.jpg" />
+    <Content Include="UserUI\WebDemos\images\bg_header_Employment.jpg" />
+    <Content Include="UserUI\WebDemos\images\bg_header_News.jpg" />
+    <Content Include="UserUI\WebDemos\images\bg_header_Product.jpg" />
+    <Content Include="UserUI\WebDemos\images\bg_header_Service.jpg" />
+    <Content Include="UserUI\WebDemos\images\bg_main_column.gif" />
+    <Content Include="UserUI\WebDemos\images\bg_position.png" />
+    <Content Include="UserUI\WebDemos\images\bg_position_product.png" />
+    <Content Include="UserUI\WebDemos\images\bg_title_column.png" />
+    <Content Include="UserUI\WebDemos\images\bg_wrap_index.jpg" />
+    <Content Include="UserUI\WebDemos\images\icon_dot_blue.png" />
+    <Content Include="UserUI\WebDemos\images\icon_dot_gray.gif" />
+    <Content Include="UserUI\WebDemos\images\icon_drgegray.png" />
+    <Content Include="UserUI\WebDemos\images\img_contact_sidebarcolumn.png" />
+    <Content Include="UserUI\WebDemos\images\img_copyright_column.png" />
+    <Content Include="UserUI\WebDemos\images\img_copyright_index.png" />
+    <Content Include="UserUI\WebDemos\images\img_prd_HousingSecurity.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_MaintenanceFunds.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_Mapping.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_NewHouse.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_Practitioners.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_ProjectManagement.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_Property.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_Statistics.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_StockHouse.jpg" />
+    <Content Include="UserUI\WebDemos\images\img_prd_Transaction.jpg" />
+    <Content Include="UserUI\WebDemos\images\logo.png" />
+    <Content Include="UserUI\WebDemos\images\nav_column.png" />
+    <Content Include="UserUI\WebDemos\images\nav_index.png" />
+    <Content Include="UserUI\WebDemos\images\top-2.gif" />
+    <Content Include="UserUI\WebDemos\style\CommonStyle.css" />
+    <Content Include="UserUI\WebDemos\style\pageStyle.css" />
+    <Content Include="UserUI\WebDemos\style\style.css" />
+    <Content Include="UserUI\XiuGaiMiMa.asmx" />
+    <Content Include="UserUI\XiuGaiMiMa.aspx" />
+    <Content Include="UserUI\Xuelixuewei.aspx" />
+    <Content Include="UserUI\Userzhidulist.html" />
+    <Content Include="UserUI\XuelixueweiSP.aspx" />
+    <Content Include="UserUI\XuelixueweiTj.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUI\AddAdminLoginInfo.aspx.cs">
+      <DependentUpon>AddAdminLoginInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AddAdminLoginInfo.aspx.designer.cs">
+      <DependentUpon>AddAdminLoginInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AddDepartLoginInfo.aspx.cs">
+      <DependentUpon>AddDepartLoginInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AddDepartLoginInfo.aspx.designer.cs">
+      <DependentUpon>AddDepartLoginInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AddJwTrain.aspx.cs">
+      <DependentUpon>AddJwTrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AddJwTrain.aspx.designer.cs">
+      <DependentUpon>AddJwTrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdduserInfo.aspx.cs">
+      <DependentUpon>AdduserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdduserInfo.aspx.designer.cs">
+      <DependentUpon>AdduserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdduserLoginInfo.aspx.cs">
+      <DependentUpon>AdduserLoginInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdduserLoginInfo.aspx.designer.cs">
+      <DependentUpon>AdduserLoginInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdminIndex.ashx.cs">
+      <DependentUpon>AdminIndex.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdminLoginInfo.aspx.cs">
+      <DependentUpon>AdminLoginInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminLoginInfo.aspx.designer.cs">
+      <DependentUpon>AdminLoginInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Adminshowxlxwdetail.aspx.cs">
+      <DependentUpon>Adminshowxlxwdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Adminshowxlxwdetail.aspx.designer.cs">
+      <DependentUpon>Adminshowxlxwdetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Admintop.ashx.cs">
+      <DependentUpon>Admintop.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdminUserInfoManager.aspx.cs">
+      <DependentUpon>AdminUserInfoManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminUserInfoManager.aspx.designer.cs">
+      <DependentUpon>AdminUserInfoManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdminXiuGaiMiMa.asmx.cs">
+      <DependentUpon>AdminXiuGaiMiMa.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminXiuGaiMiMa.aspx.cs">
+      <DependentUpon>AdminXiuGaiMiMa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminXiuGaiMiMa.aspx.designer.cs">
+      <DependentUpon>AdminXiuGaiMiMa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdminxlxwSP.aspx.cs">
+      <DependentUpon>AdminxlxwSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminxlxwSP.aspx.designer.cs">
+      <DependentUpon>AdminxlxwSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdminzhiduAdd.aspx.cs">
+      <DependentUpon>AdminzhiduAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminzhiduAdd.aspx.designer.cs">
+      <DependentUpon>AdminzhiduAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\AdminzhiduManager.aspx.cs">
+      <DependentUpon>AdminzhiduManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\AdminzhiduManager.aspx.designer.cs">
+      <DependentUpon>AdminzhiduManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\deleteadminjn.aspx.cs">
+      <DependentUpon>deleteadminjn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\deleteadminjn.aspx.designer.cs">
+      <DependentUpon>deleteadminjn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DeleteAdminLogininfo.aspx.cs">
+      <DependentUpon>DeleteAdminLogininfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DeleteAdminLogininfo.aspx.designer.cs">
+      <DependentUpon>DeleteAdminLogininfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DeleteDepartLogininfo.aspx.cs">
+      <DependentUpon>DeleteDepartLogininfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DeleteDepartLogininfo.aspx.designer.cs">
+      <DependentUpon>DeleteDepartLogininfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DeleteEtmsplan.aspx.cs">
+      <DependentUpon>DeleteEtmsplan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DeleteEtmsplan.aspx.designer.cs">
+      <DependentUpon>DeleteEtmsplan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Deletejnpersontrain.aspx.cs">
+      <DependentUpon>Deletejnpersontrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Deletejnpersontrain.aspx.designer.cs">
+      <DependentUpon>Deletejnpersontrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Deletejntrain.aspx.cs">
+      <DependentUpon>Deletejntrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Deletejntrain.aspx.designer.cs">
+      <DependentUpon>Deletejntrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Deletejwtrain.aspx.cs">
+      <DependentUpon>Deletejwtrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Deletejwtrain.aspx.designer.cs">
+      <DependentUpon>Deletejwtrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DeleteNotice.aspx.cs">
+      <DependentUpon>DeleteNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DeleteNotice.aspx.designer.cs">
+      <DependentUpon>DeleteNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DeleteUserInfo.aspx.cs">
+      <DependentUpon>DeleteUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DeleteUserInfo.aspx.designer.cs">
+      <DependentUpon>DeleteUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DeleteUserLogininfo.aspx.cs">
+      <DependentUpon>DeleteUserLogininfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DeleteUserLogininfo.aspx.designer.cs">
+      <DependentUpon>DeleteUserLogininfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Deletewlxs.aspx.cs">
+      <DependentUpon>Deletewlxs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Deletewlxs.aspx.designer.cs">
+      <DependentUpon>Deletewlxs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Deletexlxw.aspx.cs">
+      <DependentUpon>Deletexlxw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Deletexlxw.aspx.designer.cs">
+      <DependentUpon>Deletexlxw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\deletezhidu.aspx.cs">
+      <DependentUpon>deletezhidu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\deletezhidu.aspx.designer.cs">
+      <DependentUpon>deletezhidu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DepartLoginInfo.aspx.cs">
+      <DependentUpon>DepartLoginInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DepartLoginInfo.aspx.designer.cs">
+      <DependentUpon>DepartLoginInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DownloadAllcanxun.aspx.cs">
+      <DependentUpon>DownloadAllcanxun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DownloadAllcanxun.aspx.designer.cs">
+      <DependentUpon>DownloadAllcanxun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DownloadEtmsplan.aspx.cs">
+      <DependentUpon>DownloadEtmsplan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DownloadEtmsplan.aspx.designer.cs">
+      <DependentUpon>DownloadEtmsplan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DownloadJuneitrain.aspx.cs">
+      <DependentUpon>DownloadJuneitrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DownloadJuneitrain.aspx.designer.cs">
+      <DependentUpon>DownloadJuneitrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\downloadjwcailiao.aspx.cs">
+      <DependentUpon>downloadjwcailiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\downloadjwcailiao.aspx.designer.cs">
+      <DependentUpon>downloadjwcailiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Downloadjwtrain.aspx.cs">
+      <DependentUpon>Downloadjwtrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Downloadjwtrain.aspx.designer.cs">
+      <DependentUpon>Downloadjwtrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\DownloadUsercanxun.aspx.cs">
+      <DependentUpon>DownloadUsercanxun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\DownloadUsercanxun.aspx.designer.cs">
+      <DependentUpon>DownloadUsercanxun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Downloadwlxs.aspx.cs">
+      <DependentUpon>Downloadwlxs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Downloadwlxs.aspx.designer.cs">
+      <DependentUpon>Downloadwlxs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\downloadzhidu.aspx.cs">
+      <DependentUpon>downloadzhidu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\downloadzhidu.aspx.designer.cs">
+      <DependentUpon>downloadzhidu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Editadminjn.aspx.cs">
+      <DependentUpon>Editadminjn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Editadminjn.aspx.designer.cs">
+      <DependentUpon>Editadminjn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EditAdminLogininfo.aspx.cs">
+      <DependentUpon>EditAdminLogininfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EditAdminLogininfo.aspx.designer.cs">
+      <DependentUpon>EditAdminLogininfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EditDepartLogininfo.aspx.cs">
+      <DependentUpon>EditDepartLogininfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EditDepartLogininfo.aspx.designer.cs">
+      <DependentUpon>EditDepartLogininfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Editjntrain.aspx.cs">
+      <DependentUpon>Editjntrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Editjntrain.aspx.designer.cs">
+      <DependentUpon>Editjntrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EditJwtrain.aspx.cs">
+      <DependentUpon>EditJwtrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EditJwtrain.aspx.designer.cs">
+      <DependentUpon>EditJwtrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EditjwtrainDetail.aspx.cs">
+      <DependentUpon>EditjwtrainDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EditjwtrainDetail.aspx.designer.cs">
+      <DependentUpon>EditjwtrainDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EditUserInfo.aspx.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EditUserInfo.aspx.designer.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EditUserLogininfo.aspx.cs">
+      <DependentUpon>EditUserLogininfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EditUserLogininfo.aspx.designer.cs">
+      <DependentUpon>EditUserLogininfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EditxlxwDetail.aspx.cs">
+      <DependentUpon>EditxlxwDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EditxlxwDetail.aspx.designer.cs">
+      <DependentUpon>EditxlxwDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EditXlxwInfo.aspx.cs">
+      <DependentUpon>EditXlxwInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EditXlxwInfo.aspx.designer.cs">
+      <DependentUpon>EditXlxwInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\EtmsplanManager.aspx.cs">
+      <DependentUpon>EtmsplanManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\EtmsplanManager.aspx.designer.cs">
+      <DependentUpon>EtmsplanManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\JnManager.aspx.cs">
+      <DependentUpon>JnManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\JnManager.aspx.designer.cs">
+      <DependentUpon>JnManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Juneitraincount.aspx.cs">
+      <DependentUpon>Juneitraincount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Juneitraincount.aspx.designer.cs">
+      <DependentUpon>Juneitraincount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\JuneitrainManager.aspx.cs">
+      <DependentUpon>JuneitrainManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\JuneitrainManager.aspx.designer.cs">
+      <DependentUpon>JuneitrainManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Juneitrainperson.aspx.cs">
+      <DependentUpon>Juneitrainperson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Juneitrainperson.aspx.designer.cs">
+      <DependentUpon>Juneitrainperson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Juwaitraincount.aspx.cs">
+      <DependentUpon>Juwaitraincount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Juwaitraincount.aspx.designer.cs">
+      <DependentUpon>Juwaitraincount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\JuwaitrainManager.aspx.cs">
+      <DependentUpon>JuwaitrainManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\JuwaitrainManager.aspx.designer.cs">
+      <DependentUpon>JuwaitrainManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\JwManager.aspx.cs">
+      <DependentUpon>JwManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\JwManager.aspx.designer.cs">
+      <DependentUpon>JwManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\NewnoticeAdd.aspx.cs">
+      <DependentUpon>NewnoticeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\NewnoticeAdd.aspx.designer.cs">
+      <DependentUpon>NewnoticeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\NewnoticeManager.aspx.cs">
+      <DependentUpon>NewnoticeManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\NewnoticeManager.aspx.designer.cs">
+      <DependentUpon>NewnoticeManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\restoresql.aspx.cs">
+      <DependentUpon>restoresql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\restoresql.aspx.designer.cs">
+      <DependentUpon>restoresql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Showadminjndetail.aspx.cs">
+      <DependentUpon>Showadminjndetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Showadminjndetail.aspx.designer.cs">
+      <DependentUpon>Showadminjndetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Showjndetail.aspx.cs">
+      <DependentUpon>Showjndetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Showjndetail.aspx.designer.cs">
+      <DependentUpon>Showjndetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\ShowjnpersontrainDetail.aspx.cs">
+      <DependentUpon>ShowjnpersontrainDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ShowjnpersontrainDetail.aspx.designer.cs">
+      <DependentUpon>ShowjnpersontrainDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\ShowjwtrainDetail.aspx.cs">
+      <DependentUpon>ShowjwtrainDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ShowjwtrainDetail.aspx.designer.cs">
+      <DependentUpon>ShowjwtrainDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\ShowNoticeDetail.aspx.cs">
+      <DependentUpon>ShowNoticeDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ShowNoticeDetail.aspx.designer.cs">
+      <DependentUpon>ShowNoticeDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\ShowUserInfodetail.aspx.cs">
+      <DependentUpon>ShowUserInfodetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ShowUserInfodetail.aspx.designer.cs">
+      <DependentUpon>ShowUserInfodetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\showwlxs.aspx.cs">
+      <DependentUpon>showwlxs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\showwlxs.aspx.designer.cs">
+      <DependentUpon>showwlxs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\ShowXlxwInfodetail.aspx.cs">
+      <DependentUpon>ShowXlxwInfodetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ShowXlxwInfodetail.aspx.designer.cs">
+      <DependentUpon>ShowXlxwInfodetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\ueditor\net\Uploader.cs" />
+    <Compile Include="AdminUI\Upzhidu.aspx.cs">
+      <DependentUpon>Upzhidu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Upzhidu.aspx.designer.cs">
+      <DependentUpon>Upzhidu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Usercanupwlxxjisuan.aspx.cs">
+      <DependentUpon>Usercanupwlxxjisuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Usercanupwlxxjisuan.aspx.designer.cs">
+      <DependentUpon>Usercanupwlxxjisuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UserInfoAdmin.aspx.cs">
+      <DependentUpon>UserInfoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UserInfoAdmin.aspx.designer.cs">
+      <DependentUpon>UserInfoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UserInfoManager.aspx.cs">
+      <DependentUpon>UserInfoManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UserInfoManager.aspx.designer.cs">
+      <DependentUpon>UserInfoManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UserLoginInfo.aspx.cs">
+      <DependentUpon>UserLoginInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UserLoginInfo.aspx.designer.cs">
+      <DependentUpon>UserLoginInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\utf8_net\net\App_Code\Config.cs" />
+    <Compile Include="AdminUI\utf8_net\net\App_Code\ConfigHandler.cs" />
+    <Compile Include="AdminUI\utf8_net\net\App_Code\CrawlerHandler.cs" />
+    <Compile Include="AdminUI\utf8_net\net\App_Code\Handler.cs" />
+    <Compile Include="AdminUI\utf8_net\net\App_Code\ListFileHandler.cs" />
+    <Compile Include="AdminUI\utf8_net\net\App_Code\NotSupportedHandler.cs" />
+    <Compile Include="AdminUI\utf8_net\net\App_Code\PathFormater.cs" />
+    <Compile Include="AdminUI\utf8_net\net\App_Code\UploadHandler.cs" />
+    <Compile Include="AdminUI\WlxsManager.aspx.cs">
+      <DependentUpon>WlxsManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\WlxsManager.aspx.designer.cs">
+      <DependentUpon>WlxsManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Wlxxup.aspx.cs">
+      <DependentUpon>Wlxxup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Wlxxup.aspx.designer.cs">
+      <DependentUpon>Wlxxup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Xlxwdengji.aspx.cs">
+      <DependentUpon>Xlxwdengji.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Xlxwdengji.aspx.designer.cs">
+      <DependentUpon>Xlxwdengji.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\XlxwManager.aspx.cs">
+      <DependentUpon>XlxwManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\XlxwManager.aspx.designer.cs">
+      <DependentUpon>XlxwManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Xuelixuewei.aspx.cs">
+      <DependentUpon>Xuelixuewei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Xuelixuewei.aspx.designer.cs">
+      <DependentUpon>Xuelixuewei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\AddJntrainrenyuan.aspx.cs">
+      <DependentUpon>AddJntrainrenyuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\AddJntrainrenyuan.aspx.designer.cs">
+      <DependentUpon>AddJntrainrenyuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\AddJwTrain.aspx.cs">
+      <DependentUpon>AddJwTrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\AddJwTrain.aspx.designer.cs">
+      <DependentUpon>AddJwTrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\DepartmentIndex.ashx.cs">
+      <DependentUpon>DepartmentIndex.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\DepartmentNewnotice.aspx.cs">
+      <DependentUpon>DepartmentNewnotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\DepartmentNewnotice.aspx.designer.cs">
+      <DependentUpon>DepartmentNewnotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\DepartmentShowNoticeDetail.aspx.cs">
+      <DependentUpon>DepartmentShowNoticeDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\DepartmentShowNoticeDetail.aspx.designer.cs">
+      <DependentUpon>DepartmentShowNoticeDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Departmenttop.ashx.cs">
+      <DependentUpon>Departmenttop.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\DepartmentTrain.aspx.cs">
+      <DependentUpon>DepartmentTrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\DepartmentTrain.aspx.designer.cs">
+      <DependentUpon>DepartmentTrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\departmentXiuGaiMiMa.asmx.cs">
+      <DependentUpon>departmentXiuGaiMiMa.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\departmentXiuGaiMiMa.aspx.cs">
+      <DependentUpon>departmentXiuGaiMiMa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\departmentXiuGaiMiMa.aspx.designer.cs">
+      <DependentUpon>departmentXiuGaiMiMa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Departmentzhidulist.aspx.cs">
+      <DependentUpon>Departmentzhidulist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Departmentzhidulist.aspx.designer.cs">
+      <DependentUpon>Departmentzhidulist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\downloadjwcailiao.aspx.cs">
+      <DependentUpon>downloadjwcailiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\downloadjwcailiao.aspx.designer.cs">
+      <DependentUpon>downloadjwcailiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\downloadzhidu.aspx.cs">
+      <DependentUpon>downloadzhidu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\downloadzhidu.aspx.designer.cs">
+      <DependentUpon>downloadzhidu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Etmsplan.aspx.cs">
+      <DependentUpon>Etmsplan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Etmsplan.aspx.designer.cs">
+      <DependentUpon>Etmsplan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Juneiaddrenyuan.aspx.cs">
+      <DependentUpon>Juneiaddrenyuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Juneiaddrenyuan.aspx.designer.cs">
+      <DependentUpon>Juneiaddrenyuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Juneitrain.aspx.cs">
+      <DependentUpon>Juneitrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Juneitrain.aspx.designer.cs">
+      <DependentUpon>Juneitrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Juneitrainchaxun.aspx.cs">
+      <DependentUpon>Juneitrainchaxun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Juneitrainchaxun.aspx.designer.cs">
+      <DependentUpon>Juneitrainchaxun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\JuneitrainInquiry1.aspx.cs">
+      <DependentUpon>JuneitrainInquiry1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\JuneitrainInquiry1.aspx.designer.cs">
+      <DependentUpon>JuneitrainInquiry1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Juneitrainrenyuan.aspx.cs">
+      <DependentUpon>Juneitrainrenyuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Juneitrainrenyuan.aspx.designer.cs">
+      <DependentUpon>Juneitrainrenyuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\JuneitrainTj.aspx.cs">
+      <DependentUpon>JuneitrainTj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\JuneitrainTj.aspx.designer.cs">
+      <DependentUpon>JuneitrainTj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\JuwaitrainInquiry.aspx.cs">
+      <DependentUpon>JuwaitrainInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\JuwaitrainInquiry.aspx.designer.cs">
+      <DependentUpon>JuwaitrainInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\JwTrainTj.aspx.cs">
+      <DependentUpon>JwTrainTj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\JwTrainTj.aspx.designer.cs">
+      <DependentUpon>JwTrainTj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Showdepartjndetail.aspx.cs">
+      <DependentUpon>Showdepartjndetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Showdepartjndetail.aspx.designer.cs">
+      <DependentUpon>Showdepartjndetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Showjndetail.aspx.cs">
+      <DependentUpon>Showjndetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Showjndetail.aspx.designer.cs">
+      <DependentUpon>Showjndetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\ShowjwtrainDetail.aspx.cs">
+      <DependentUpon>ShowjwtrainDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\ShowjwtrainDetail.aspx.designer.cs">
+      <DependentUpon>ShowjwtrainDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Showxlxwdetail.aspx.cs">
+      <DependentUpon>Showxlxwdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Showxlxwdetail.aspx.designer.cs">
+      <DependentUpon>Showxlxwdetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\Spxlxw.aspx.cs">
+      <DependentUpon>Spxlxw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\Spxlxw.aspx.designer.cs">
+      <DependentUpon>Spxlxw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\src\JuneitrainInquiry.aspx.cs">
+      <DependentUpon>JuneitrainInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\src\JuneitrainInquiry.aspx.designer.cs">
+      <DependentUpon>JuneitrainInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\JuneitrainInquiry.aspx.cs">
+      <DependentUpon>JuneitrainInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\JuneitrainInquiry.aspx.designer.cs">
+      <DependentUpon>JuneitrainInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\XuelixueweiInquiry.aspx.cs">
+      <DependentUpon>XuelixueweiInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\XuelixueweiInquiry.aspx.designer.cs">
+      <DependentUpon>XuelixueweiInquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentUI\XuelixueweiSp.aspx.cs">
+      <DependentUpon>XuelixueweiSp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentUI\XuelixueweiSp.aspx.designer.cs">
+      <DependentUpon>XuelixueweiSp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserUI\DownFile.ashx.cs">
+      <DependentUpon>DownFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\downloadzhidu.aspx.cs">
+      <DependentUpon>downloadzhidu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\downloadzhidu.aspx.designer.cs">
+      <DependentUpon>downloadzhidu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Juwaitrain.ashx.cs">
+      <DependentUpon>Juwaitrain.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Juwaitrain.aspx.cs">
+      <DependentUpon>Juwaitrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Juwaitrain.aspx.designer.cs">
+      <DependentUpon>Juwaitrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\personjn.aspx.cs">
+      <DependentUpon>personjn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\personjn.aspx.designer.cs">
+      <DependentUpon>personjn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\personjw.aspx.cs">
+      <DependentUpon>personjw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\personjw.aspx.designer.cs">
+      <DependentUpon>personjw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\personxlxw.aspx.cs">
+      <DependentUpon>personxlxw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\personxlxw.aspx.designer.cs">
+      <DependentUpon>personxlxw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ShowjnDetail.aspx.cs">
+      <DependentUpon>ShowjnDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\ShowjnDetail.aspx.designer.cs">
+      <DependentUpon>ShowjnDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Showjntrain.aspx.cs">
+      <DependentUpon>Showjntrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Showjntrain.aspx.designer.cs">
+      <DependentUpon>Showjntrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ShowJuwaicanxunDetail.aspx.cs">
+      <DependentUpon>ShowJuwaicanxunDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\ShowJuwaicanxunDetail.aspx.designer.cs">
+      <DependentUpon>ShowJuwaicanxunDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ShowjwDetail.aspx.cs">
+      <DependentUpon>ShowjwDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\ShowjwDetail.aspx.designer.cs">
+      <DependentUpon>ShowjwDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Showjwtrain.aspx.cs">
+      <DependentUpon>Showjwtrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Showjwtrain.aspx.designer.cs">
+      <DependentUpon>Showjwtrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ShowNoticeDetail.aspx.cs">
+      <DependentUpon>ShowNoticeDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\ShowNoticeDetail.aspx.designer.cs">
+      <DependentUpon>ShowNoticeDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Showxlxwtrain.aspx.cs">
+      <DependentUpon>Showxlxwtrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Showxlxwtrain.aspx.designer.cs">
+      <DependentUpon>Showxlxwtrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\top.ashx.cs">
+      <DependentUpon>top.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\UserAllTrainToExcel.aspx.cs">
+      <DependentUpon>UserAllTrainToExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\UserAllTrainToExcel.aspx.designer.cs">
+      <DependentUpon>UserAllTrainToExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Usercanupwlxx.aspx.cs">
+      <DependentUpon>Usercanupwlxx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Usercanupwlxx.aspx.designer.cs">
+      <DependentUpon>Usercanupwlxx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Usercanxunjj.aspx.cs">
+      <DependentUpon>Usercanxunjj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Usercanxunjj.aspx.designer.cs">
+      <DependentUpon>Usercanxunjj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Usercanxunjn.aspx.cs">
+      <DependentUpon>Usercanxunjn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Usercanxunjn.aspx.designer.cs">
+      <DependentUpon>Usercanxunjn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Usercanxunjw.aspx.cs">
+      <DependentUpon>Usercanxunjw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Usercanxunjw.aspx.designer.cs">
+      <DependentUpon>Usercanxunjw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Usercanxunxlxw.aspx.cs">
+      <DependentUpon>Usercanxunxlxw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Usercanxunxlxw.aspx.designer.cs">
+      <DependentUpon>Usercanxunxlxw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\UserControls\session.ascx.cs">
+      <DependentUpon>session.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\UserIndex.ashx.cs">
+      <DependentUpon>UserIndex.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\UserNewnotice.aspx.cs">
+      <DependentUpon>UserNewnotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\UserNewnotice.aspx.designer.cs">
+      <DependentUpon>UserNewnotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\UserZhidu.aspx.cs">
+      <DependentUpon>UserZhidu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\UserZhidu.aspx.designer.cs">
+      <DependentUpon>UserZhidu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Userzhidulist.ashx.cs">
+      <DependentUpon>Userzhidulist.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Userzhidulist.aspx.cs">
+      <DependentUpon>Userzhidulist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Userzhidulist.aspx.designer.cs">
+      <DependentUpon>Userzhidulist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\XiuGaiMiMa.asmx.cs">
+      <DependentUpon>XiuGaiMiMa.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserUI\XiuGaiMiMa.aspx.cs">
+      <DependentUpon>XiuGaiMiMa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\XiuGaiMiMa.aspx.designer.cs">
+      <DependentUpon>XiuGaiMiMa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Xuelixuewei.aspx.cs">
+      <DependentUpon>Xuelixuewei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\Xuelixuewei.aspx.designer.cs">
+      <DependentUpon>Xuelixuewei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\XuelixueweiSP.aspx.cs">
+      <DependentUpon>XuelixueweiSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\XuelixueweiSP.aspx.designer.cs">
+      <DependentUpon>XuelixueweiSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\XuelixueweiTj.aspx.cs">
+      <DependentUpon>XuelixueweiTj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUI\XuelixueweiTj.aspx.designer.cs">
+      <DependentUpon>XuelixueweiTj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Validatecode.ashx.cs">
+      <DependentUpon>Validatecode.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminUI\AdminIndex.ashx" />
+    <Content Include="AdminUI\Admintop.ashx" />
+    <Content Include="AdminUI\ueditor\net\getContent.ashx" />
+    <Content Include="AdminUI\ueditor\net\imageUp.ashx" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.eot" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.ttf" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.woff" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.eot" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.ttf" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.woff" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.eot" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.ttf" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.woff" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.eot" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.ttf" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.woff" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\Symbola.eot" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\Symbola.otf" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\Symbola.ttf" />
+    <None Include="AdminUI\ueditor\third-party\mathquill\font\Symbola.woff" />
+    <None Include="AdminUI\utf8_net\net\config.json" />
+    <Content Include="AdminUI\utf8_net\net\controller.ashx" />
+    <None Include="AdminUI\utf8_net\net\README.md" />
+    <Content Include="AdminUI\utf8_net\net\Web.config" />
+    <None Include="AdminUI\utf8_net\third-party\jquery-1.10.2.min.map" />
+    <None Include="AdminUI\utf8_net\third-party\video-js\font\vjs.eot" />
+    <None Include="AdminUI\utf8_net\third-party\video-js\font\vjs.ttf" />
+    <None Include="AdminUI\utf8_net\third-party\video-js\font\vjs.woff" />
+    <Content Include="DepartmentUI\DepartmentIndex.ashx" />
+    <Content Include="DepartmentUI\Departmenttop.ashx" />
+    <None Include="login_files\ScriptResource%281%29.axd" />
+    <None Include="login_files\ScriptResource.axd" />
+    <None Include="login_files\Thumbs.db" />
+    <None Include="login_files\WebResource%281%29.axd" />
+    <None Include="login_files\WebResource.axd" />
+    <Content Include="Validatecode.ashx" />
+    <Content Include="UserUI\DownFile.ashx" />
+    <Content Include="UserUI\Juwaitrain.ashx" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Web.config.pubxml" />
+    <None Include="UserUI\login_files\ScriptResource%281%29.axd" />
+    <None Include="UserUI\login_files\ScriptResource.axd" />
+    <None Include="UserUI\login_files\Thumbs.db" />
+    <None Include="UserUI\login_files\WebResource%281%29.axd" />
+    <None Include="UserUI\login_files\WebResource.axd" />
+    <None Include="UserUI\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="UserUI\obj\Debug\ResolveAssemblyReference.cache" />
+    <Content Include="UserUI\top.ashx" />
+    <None Include="UserUI\upfile\affix\633703945663125000.doc" />
+    <None Include="UserUI\upfile\affix\633703945867187500.xls" />
+    <None Include="UserUI\upfile\affix\634757867002031250.doc" />
+    <None Include="UserUI\upfile\affix\636013263710630436.xls" />
+    <None Include="UserUI\upfile\affix\636013264309174671.xls" />
+    <None Include="UserUI\upfile\affix\Thumbs.db" />
+    <Content Include="UserUI\UserIndex.ashx" />
+    <Content Include="UserUI\Userzhidulist.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zzs.sddj.Bll\zzs.sddj.Bll.csproj">
+      <Project>{3E375990-7CE0-4481-98A8-44A692F70F0B}</Project>
+      <Name>zzs.sddj.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zzs.sddj.Common\zzs.sddj.Common.csproj">
+      <Project>{E8AD04DA-7FA2-4132-AC32-5D4315A5A6DE}</Project>
+      <Name>zzs.sddj.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zzs.sddj.Model\zzs.sddj.Model.csproj">
+      <Project>{7B3680DA-8F5C-4DC6-BB0B-CA7D63F19611}</Project>
+      <Name>zzs.sddj.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserUI\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>34409</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
